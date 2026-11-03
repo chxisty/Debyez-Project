@@ -32,3 +32,4 @@ services:
           type: web
           name: aegis-backend
           property: host
+
