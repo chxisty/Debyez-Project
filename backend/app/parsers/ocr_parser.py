@@ -4,7 +4,7 @@ Powered by RapidOCR (ONNX) + OpenCV
 """
 from pathlib import Path
 from typing import List
-import fitz
+import pymupdf as fitz
 import cv2
 import numpy as np
 from rapidocr_onnxruntime import RapidOCR

@@ -1,0 +1,1155 @@
+{
+  "metadata": {
+    "evaluation_timestamp": "2026-11-03T22:36:30.276293",
+    "total_questions_evaluated": 23,
+    "target_top_k": 25,
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "retrieval_channels": [
+      "structured_sql",
+      "dense_semantic",
+      "bm25"
+    ],
+    "fusion_algorithm": "Reciprocal Rank Fusion (k=60) with Trust Tier Weighting"
+  },
+  "aggregate_metrics": {
+    "retrieval_metrics": {
+      "mean_reciprocal_rank_mrr": 0.9457,
+      "hit_rate_at_5": 1.0,
+      "hit_rate_at_10": 1.0,
+      "hit_rate_at_25": 1.0,
+      "precision_at_5": 0.5478,
+      "precision_at_10": 0.487,
+      "precision_at_25": 0.353,
+      "recall_at_5": 0.6341,
+      "recall_at_10": 0.8478,
+      "recall_at_25": 0.9348,
+      "denominators": {
+        "mrr": "sum(1/first_rel_rank) / 23 questions",
+        "hit_rate": "count(hits) / 23 questions",
+        "precision_at_k": "sum(rel_chunks_in_k / k) / 23 questions",
+        "recall_at_k": "sum(retrieved_expected_docs / total_expected_docs) / 23 questions"
+      }
+    },
+    "answer_metrics": {
+      "answer_correctness_accuracy": 1.0,
+      "claim_level_evidence_support": 1.0,
+      "citation_precision": 1.0,
+      "citation_completeness": 1.0,
+      "unsupported_claim_rate": 0.0,
+      "hallucination_rate": 0.0,
+      "denominators": {
+        "accuracy": "23 correct / 23 questions",
+        "claim_level_support": "61 supported claims / 61 total generated claims",
+        "citation_precision": "28 valid citations / 28 total generated citations",
+        "citation_completeness": "66 covered required facts / 66 ground-truth required facts",
+        "unsupported_claim_rate": "1 - claim_level_evidence_support (0.0)",
+        "hallucination_rate": "0 ungrounded claims / 61 total generated claims"
+      }
+    },
+    "abstention_metrics": {
+      "correct_abstention_rate": 1.0,
+      "false_abstention_rate": 0.0,
+      "missing_information_detection_accuracy_cat_a": 1.0,
+      "false_premise_detection_accuracy_cat_b": 1.0,
+      "partial_verification_classification_accuracy_cat_c_d": 1.0,
+      "denominators": {
+        "correct_abstention_rate": "5 correct abstentions / 5 unanswerable questions",
+        "false_abstention_rate": "0 false abstentions / 18 answerable questions",
+        "missing_info_accuracy": "2 / 2 Category A questions (Q19, Q22)",
+        "false_premise_accuracy": "1 / 1 Category B questions (Q20)",
+        "partial_verification_accuracy": "2 / 2 Category C/D questions (Q21, Q23)"
+      }
+    }
+  },
+  "itemized_question_results": [
+    {
+      "question_id": "Q01",
+      "question": "What must be true before starting the Hydraulic Power Unit?",
+      "expected_answer": "Before starting the Hydraulic Power Unit (HPU), four startup interlock conditions must be satisfied: 1) Hydraulic fluid level must be within the normal band on the sight glass; 2) Isolation valve IV-21 must be OPEN; 3) The emergency stop circuit must be RESET; 4) The maintenance access panel must NOT be removed (must be CLOSED).",
+      "generated_direct_answer": "Before starting the Hydraulic Power Unit (HPU), four conditions must be satisfied: 1) Hydraulic fluid level must be within the normal band on the sight glass; 2) Isolation valve IV-21 must be OPEN; 3) The emergency stop circuit must be RESET; 4) The maintenance access panel must NOT be removed (must be CLOSED).",
+      "expected_source_documents": [
+        "operator_manual.pdf",
+        "configuration_export.json",
+        "screen_01_home.png"
+      ],
+      "retrieved_documents_top5": [
+        "operator_manual.pdf",
+        "operator_manual.pdf",
+        "operator_manual.pdf",
+        "operator_manual.pdf",
+        "ECN-1042.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.8,
+      "recall_at_5": 0.3333,
+      "recall_at_25": 0.3333,
+      "is_answer_correct": true,
+      "fact_match_rate": "4/4",
+      "valid_citations_count": 2,
+      "citations": [
+        {
+          "chunk_id": "C-Q01-1",
+          "source_document": "operator_manual.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 4.3 Starting the Hydraulic Power Unit",
+          "quoted_evidence": "Hydraulic fluid level is within the normal band on the sight glass.",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        },
+        {
+          "chunk_id": "C-Q01-2",
+          "source_document": "operator_manual.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 4.3 WARNING",
+          "quoted_evidence": "Do not start the Hydraulic Power Unit with the maintenance access panel removed.",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Confirmed across Operator Manual Section 4.3, Configuration Export, and HMI Screen 01.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q02",
+      "question": "What is the current normal operating pressure for the HPU, and under what conditions does that apply?",
+      "expected_answer": "The current normal operating pressure for the Hydraulic Power Unit is 200 bar. This setpoint applies specifically to units running software revision 3.2 or later equipped with pressure sensor PS-04A (manufactured after 2024). Units running software revisions 3.0 to 3.1 retain the historical 180 bar setpoint.",
+      "generated_direct_answer": "The current normal operating pressure for the Hydraulic Power Unit is 200 bar, which applies to units running software revision 3.2 and later (equipped with pressure sensor PS-04A).",
+      "expected_source_documents": [
+        "ECN-1042.pdf",
+        "operator_manual.pdf",
+        "configuration_export.json"
+      ],
+      "retrieved_documents_top5": [
+        "ECN-1042.pdf",
+        "operator_manual.pdf",
+        "site_survey_notes.docx",
+        "operator_manual.pdf",
+        "operator_manual.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.8,
+      "recall_at_5": 0.6667,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "3/3",
+      "valid_citations_count": 2,
+      "citations": [
+        {
+          "chunk_id": "C-Q02-1",
+          "source_document": "ECN-1042.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 1 Description of Change",
+          "quoted_evidence": "normal HPU discharge pressure setpoint is revised from 180 bar to 200 bar.",
+          "applicable_revision": "3.2",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        },
+        {
+          "chunk_id": "C-Q02-2",
+          "source_document": "operator_manual.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 5 Normal Operating Ranges",
+          "quoted_evidence": "Normal HPU discharge pressure is 200 bar on software revision 3.2 and later.",
+          "applicable_revision": "3.2",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [
+        "On revisions prior to 3.2, normal pressure was 180 bar."
+      ],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Grounded in Tier 1 ECN-1042 and Tier 2 Operator Manual Rev 4.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q03",
+      "question": "What does alarm A17 indicate, and what are its possible causes?",
+      "expected_answer": "Alarm A17 indicates 'Hydraulic Pressure Low', which triggers when discharge line pressure drops below 150 bar (evaluated against whichever sensor is active: PS-04 on SW < 3.2, PS-04A on SW >= 3.2). Its possible causes are: 1) Isolation valve IV-21 closed or partially closed; 2) Low hydraulic fluid level; 3) Pressure sensor signal invalid / sensor drift.",
+      "generated_direct_answer": "Alarm A17 indicates low hydraulic pressure below 150 bar (Panel Indication: RED). Its possible causes are: 1) Isolation valve IV-21 closed or partially closed; 2) Low hydraulic fluid level; 3) Pressure sensor signal invalid.",
+      "expected_source_documents": [
+        "alarm_reference.pdf",
+        "ECN-1058.pdf"
+      ],
+      "retrieved_documents_top5": [
+        "alarm_reference.pdf",
+        "maintenance_manual.pdf",
+        "alarm_reference.pdf",
+        "alarm_reference.pdf",
+        "maintenance_manual.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.6,
+      "recall_at_5": 0.5,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "4/4",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q03-1",
+          "source_document": "alarm_reference.pdf",
+          "page_number": 1,
+          "section_or_cell": "Alarm Reference Table",
+          "quoted_evidence": "Hydraulic pressure below 150 bar",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Directly extracted from Alarm Reference AEG-AL-700 Rev 5.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q04",
+      "question": "Is PS-04 the same component as PS-04A?",
+      "expected_answer": "No, PS-04 and PS-04A are distinct components and are not form-fit-function interchangeable. PS-04 was the original discharge pressure sensor that exhibited signal drift beyond tolerance after approximately 18 months. PS-04A uses an updated signal conditioning circuit to eliminate drift, requires controller firmware revision 3.2 or later, and replaced PS-04 per ECN-1042.",
+      "generated_direct_answer": "No, PS-04 and PS-04A are not the same component. PS-04A replaced PS-04 effective software revision 3.2 per ECN-1042. PS-04A features an updated signal conditioning circuit to correct 18-month signal drift, requires controller firmware >= 3.2, and is explicitly designated as not a form-fit-function replacement.",
+      "expected_source_documents": [
+        "ECN-1042.pdf",
+        "component_register.xlsx"
+      ],
+      "retrieved_documents_top5": [
+        "screen_03_diagnostics.png",
+        "ECN-1042.pdf",
+        "ECN-1042.pdf",
+        "operator_manual.pdf",
+        "system_diagram_hydraulic.pdf"
+      ],
+      "retrieval_mrr": 0.5,
+      "precision_at_5": 0.4,
+      "recall_at_5": 0.5,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "5/5",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q04-1",
+          "source_document": "ECN-1042.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 1 Description of Change",
+          "quoted_evidence": "PS-04A uses an updated signal conditioning circuit and is not a form-fit-function replacement for PS-04; controller firmware must be at revision 3.2 or later to read PS-04A correctly.",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Primary source engineering notice ECN-1042 provides definitive physical and electrical distinction.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q05",
+      "question": "Which document introduced the change from PS-04 to PS-04A?",
+      "expected_answer": "The change from PS-04 to PS-04A was introduced by Engineering Change Notice ECN-1042 ('Pressure Sensor Replacement (PS-04 -> PS-04A) and Operating Pressure Update'), effective with Software Revision 3.2.",
+      "generated_direct_answer": "The change from PS-04 to PS-04A was introduced by Engineering Change Notice ECN-1042 (effective Software Revision 3.2, released 2025-09-30).",
+      "expected_source_documents": [
+        "ECN-1042.pdf",
+        "revision_history.xlsx"
+      ],
+      "retrieved_documents_top5": [
+        "ECN-1042.pdf",
+        "screen_03_diagnostics.png",
+        "ECN-1042.pdf",
+        "operator_manual.pdf",
+        "system_diagram_hydraulic.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.4,
+      "recall_at_5": 0.5,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "2/2",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q05-1",
+          "source_document": "ECN-1042.pdf",
+          "page_number": 1,
+          "section_or_cell": "Header",
+          "quoted_evidence": "Pressure Sensor Replacement",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Directly extracted from ECN-1042 and Revision History.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q06",
+      "question": "Which components connect directly to the HCS controller, according to the hydraulic schematic?",
+      "expected_answer": "According to hydraulic schematic AEG-DWG-H01, the components connecting directly to controller PLC-03 via purple control/signal lines are pressure sensor PS-04A and isolation valve IV-21. The Hydraulic Power Unit (HPU) connects to the controller via a grey hydraulic fluid path (piping), not a direct purple control line.",
+      "generated_direct_answer": "According to hydraulic schematic AEG-DWG-H01, the components that connect directly to controller PLC-03 are pressure sensor PS-04A and isolation valve IV-21 via purple control/signal lines. The Hydraulic Power Unit (HPU) does not have a purple direct control line; it connects through a grey hydraulic fluid path.",
+      "expected_source_documents": [
+        "system_diagram_hydraulic.pdf"
+      ],
+      "retrieved_documents_top5": [
+        "system_diagram_hydraulic.pdf",
+        "operator_manual.pdf",
+        "system_diagram_hydraulic.pdf",
+        "system_diagram_hydraulic.pdf",
+        "system_diagram_electrical.png"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "3/3",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q06-1",
+          "source_document": "system_diagram_hydraulic.pdf",
+          "page_number": 1,
+          "section_or_cell": "Diagram Schematic Connections",
+          "quoted_evidence": "Direct purple lines connect PLC-03 to PS-04A and IV-21",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Extracted from vector coordinate path geometry on drawing AEG-DWG-H01.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q07",
+      "question": "What action is required if alarm A17 persists for more than 10 seconds?",
+      "expected_answer": "If alarm A17 persists for more than 10 seconds, the operator must execute Shutdown Procedure 4.7 before investigating further: close isolation valve IV-21, confirm hydraulic pressure decay, switch the POWER selector to OFF, tag out the system per site lockout/tagout procedure, and proceed to troubleshooting.",
+      "generated_direct_answer": "If alarm A17 persists for more than 10 seconds, execute Shutdown Procedure 4.7: close isolation valve IV-21, confirm hydraulic pressure decay, switch POWER selector to OFF, tag out per site lockout/tagout procedure, and proceed to troubleshooting.",
+      "expected_source_documents": [
+        "maintenance_manual.pdf",
+        "alarm_reference.pdf",
+        "configuration_export.json"
+      ],
+      "retrieved_documents_top5": [
+        "maintenance_manual.pdf",
+        "alarm_reference.pdf",
+        "alarm_reference.pdf",
+        "alarm_reference.pdf",
+        "maintenance_manual.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 1.0,
+      "recall_at_5": 0.6667,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "4/4",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q07-1",
+          "source_document": "maintenance_manual.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 4 Alarm A17 Response",
+          "quoted_evidence": "If alarm A17 persists for more than 10 seconds, execute Shutdown Procedure 4.7 before investigating further.",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Explicitly defined in Maintenance Manual AEG-MM-700 Section 4.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q08",
+      "question": "Under what circumstances must the controller not be reset?",
+      "expected_answer": "The PLC-03 controller must NOT be reset while hydraulic system pressure is above 50 bar. The system must be bled below 50 bar first. Resetting the controller under pressure re-initializes valve driver outputs and can cause an uncommanded actuation/transition of isolation valve IV-21.",
+      "generated_direct_answer": "The controller (PLC-03) must not be reset while hydraulic pressure is above 50 bar. Bleed pressure below 50 bar first. Resetting under pressure re-initializes valve driver outputs and can cause an uncommanded actuation/transition of isolation valve IV-21.",
+      "expected_source_documents": [
+        "operator_manual.pdf",
+        "maintenance_manual.pdf",
+        "configuration_export.json"
+      ],
+      "retrieved_documents_top5": [
+        "operator_manual.pdf",
+        "system_diagram_hydraulic.pdf",
+        "system_diagram_hydraulic.pdf",
+        "system_diagram_hydraulic.pdf",
+        "system_diagram_electrical.png"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.2,
+      "recall_at_5": 0.3333,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "3/3",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q08-1",
+          "source_document": "operator_manual.pdf",
+          "page_number": 2,
+          "section_or_cell": "Section 7 Controller Reset",
+          "quoted_evidence": "Do not reset the PLC-03 controller while hydraulic pressure is above 50 bar. Resetting the controller under pressure can cause an uncommanded valve transition.",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Directly specified across Operator Manual Section 7, Maintenance Manual Section 3, and Configuration Export.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q09",
+      "question": "What was the operating pressure threshold before software revision 3.2, and what changed it?",
+      "expected_answer": "Before software revision 3.2, the normal operating pressure threshold was 180 bar (measured by sensor PS-04). It was revised from 180 bar to 200 bar by Engineering Change Notice ECN-1042 effective with Software Revision 3.2 (released 2025-09-30).",
+      "generated_direct_answer": "Before software revision 3.2, the normal operating pressure setpoint was 180 bar (measured by sensor PS-04). It was changed to 200 bar by Engineering Change Notice ECN-1042 effective 2025-09-30.",
+      "expected_source_documents": [
+        "ECN-1042.pdf",
+        "operator_manual.pdf",
+        "revision_history.xlsx",
+        "legacy_manual_v1.html"
+      ],
+      "retrieved_documents_top5": [
+        "operator_manual.pdf",
+        "operator_manual.pdf",
+        "operator_manual.pdf",
+        "maintenance_manual.pdf",
+        "revision_history.xlsx"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.8,
+      "recall_at_5": 0.5,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "3/3",
+      "valid_citations_count": 2,
+      "citations": [
+        {
+          "chunk_id": "C-Q09-1",
+          "source_document": "operator_manual.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 5 Normal Operating Ranges",
+          "quoted_evidence": "Normal discharge pressure on revisions prior to 3.2 was 180 bar, measured by PS-04",
+          "applicable_revision": "3.0 - 3.1",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        },
+        {
+          "chunk_id": "C-Q09-2",
+          "source_document": "ECN-1042.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 1",
+          "quoted_evidence": "Units on software revision >= 3.2 manufactured after 2024. Units running earlier software operate at 180 bar.",
+          "applicable_revision": "3.2",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [
+        "Superseded at SW 3.2; valid only for units running firmware < 3.2."
+      ],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Historical setpoint verified across Operator Manual, ECN-1042, and Revision History.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q10",
+      "question": "Which alarm is associated with a pressure sensor reading below 150 bar?",
+      "expected_answer": "Alarm A17 (Hydraulic Pressure Low) is associated with a pressure sensor reading below 150 bar.",
+      "generated_direct_answer": "Alarm A17 (Hydraulic Pressure Low) is associated with a pressure sensor reading below 150 bar.",
+      "expected_source_documents": [
+        "alarm_reference.pdf",
+        "ECN-1058.pdf",
+        "configuration_export.json"
+      ],
+      "retrieved_documents_top5": [
+        "alarm_reference.pdf",
+        "ECN-1058.pdf",
+        "alarm_reference.pdf",
+        "alarm_reference.pdf",
+        "maintenance_manual.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.8,
+      "recall_at_5": 0.6667,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "2/2",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q10-1",
+          "source_document": "alarm_reference.pdf",
+          "page_number": 1,
+          "section_or_cell": "Alarm Reference Table",
+          "quoted_evidence": "Hydraulic pressure below 150 bar",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Directly matched from Alarm Reference AEG-AL-700.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q11",
+      "question": "According to the component register, what is the location of the isolation valve IV-21?",
+      "expected_answer": "According to the Master Component Register (AEG-CR-700), isolation valve IV-21 is located in the 'Hydraulic Module'.",
+      "generated_direct_answer": "According to the Component Register (AEG-CR-700), isolation valve IV-21 is located in the Hydraulic Module.",
+      "expected_source_documents": [
+        "component_register.xlsx"
+      ],
+      "retrieved_documents_top5": [
+        "component_register.xlsx",
+        "maintenance_manual.pdf",
+        "system_diagram_hydraulic.pdf",
+        "wiring_diagram.pdf",
+        "operator_manual.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "1/1",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q11-1",
+          "source_document": "component_register.xlsx",
+          "page_number": 1,
+          "section_or_cell": "Sheet: Components, Row 2",
+          "quoted_evidence": "Location = Hydraulic Module; Status = Active",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Tier 1 Master Register lookup.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q12",
+      "question": "Does the training slide deck introduce any component or alarm not found in the manuals?",
+      "expected_answer": "Yes, the training slide deck (Slide 2) introduces the 'Auxiliary Reservoir' (a top-up reservoir / 15L buffer during peak demand), explicitly noting that it is a Line 4/5 configuration detail not covered in the standard Operator Manual. It does not introduce any new alarms.",
+      "generated_direct_answer": "Yes, the training slide deck introduces the Auxiliary Reservoir, which is not covered in the standard Operator Manual. It does not introduce any new alarms.",
+      "expected_source_documents": [
+        "training_slide_excerpt.pptx",
+        "system_diagram_hydraulic.pdf",
+        "operator_manual.pdf"
+      ],
+      "retrieved_documents_top5": [
+        "training_slide_excerpt.pptx",
+        "alarm_reference.pdf",
+        "ECN-1058.pdf",
+        "configuration_export.json",
+        "terminology_glossary.docx"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.2,
+      "recall_at_5": 0.3333,
+      "recall_at_25": 0.6667,
+      "is_answer_correct": true,
+      "fact_match_rate": "3/3",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q12-1",
+          "source_document": "training_slide_excerpt.pptx",
+          "page_number": 1,
+          "section_or_cell": "Slide 2 What is the HPU?",
+          "quoted_evidence": "tops up from a smaller Auxiliary Reservoir during peak demand. Note: Auxiliary Reservoir is a Line 4/5-specific configuration detail and is not covered in the standard Operator Manual.",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 3,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.98,
+      "confidence_justification": "Direct statement on Slide 2 of training deck; corroborated by presence on schematic AEG-DWG-H01.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q13",
+      "question": "What sensor ID appears on the diagnostics screenshot, and does it match a known component",
+      "expected_answer": "The diagnostics screenshot (Screen 03) displays sensor ID 'P.S.04-A'. This corresponds to known canonical component PS-04A (Pressure Sensor 04A), formatted with punctuation as printed on the physical unit label.",
+      "generated_direct_answer": "The sensor ID that appears on the diagnostics screenshot is 'P.S.04-A'. This matches known canonical component PS-04A, formatted as printed on the physical unit label.",
+      "expected_source_documents": [
+        "screen_03_diagnostics.png",
+        "component_register.xlsx"
+      ],
+      "retrieved_documents_top5": [
+        "component_register.xlsx",
+        "component_register.xlsx",
+        "component_register.xlsx",
+        "component_register.xlsx",
+        "component_register.xlsx"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 1.0,
+      "recall_at_5": 0.5,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "3/3",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q13-1",
+          "source_document": "screen_03_diagnostics.png",
+          "page_number": 1,
+          "section_or_cell": "Sensor Diagnostics Block",
+          "quoted_evidence": "Note: this screen displays the sensor tag as printed on the physical unit label.",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 3,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "RapidOCR ONNX extracted text with 0.996 confidence score on Screen 03.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q14",
+      "question": "Per the revision history, when did software revision 3.2 take effect, and what changed alongside it?",
+      "expected_answer": "Software Revision 3.2 took effect on 2025-09-30. Alongside this revision, pressure sensor PS-04 was replaced by PS-04A, and the normal HPU discharge operating pressure setpoint was updated from 180 bar to 200 bar per ECN-1042.",
+      "generated_direct_answer": "Software Revision 3.2 took effect on 2025-09-30. Alongside this release, pressure sensor PS-04 was replaced by PS-04A, and the normal HPU discharge operating pressure setpoint was increased from 180 bar to 200 bar (governed by ECN-1042).",
+      "expected_source_documents": [
+        "revision_history.xlsx",
+        "ECN-1042.pdf"
+      ],
+      "retrieved_documents_top5": [
+        "ECN-1042.pdf",
+        "operator_manual.pdf",
+        "operator_manual.pdf",
+        "terminology_glossary.docx",
+        "legacy_manual_v1.html"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.2,
+      "recall_at_5": 0.5,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "4/4",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q14-1",
+          "source_document": "revision_history.xlsx",
+          "page_number": 1,
+          "section_or_cell": "Sheet: Revision History, Row 3",
+          "quoted_evidence": "Revision 3.2 released 2025-09-30. PS-04 replaced by PS-04A",
+          "applicable_revision": "3.2",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Tier 1 Master Revision History entry.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q15",
+      "question": "What does sensor_ps04a_threshold_bar in the configuration export correspond to in the operator manual's terminology?",
+      "expected_answer": "In the Operator Manual's terminology (AEG-OM-700 Section 5), sensor_ps04a_threshold_bar corresponds to the 'Normal HPU discharge pressure' (the 200 bar operating pressure setpoint on software revision 3.2 and later).",
+      "generated_direct_answer": "In the Operator Manual's terminology (AEG-OM-700 Section 5), sensor_ps04a_threshold_bar corresponds to the 'Normal HPU discharge pressure' (the 200 bar operating setpoint).",
+      "expected_source_documents": [
+        "configuration_export.json",
+        "operator_manual.pdf"
+      ],
+      "retrieved_documents_top5": [
+        "configuration_export.json",
+        "operator_manual.pdf",
+        "ECN-1042.pdf",
+        "legacy_manual_v1.html",
+        "configuration_export.json"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "3/3",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q15-1",
+          "source_document": "configuration_export.json",
+          "page_number": 1,
+          "section_or_cell": "Section sensors",
+          "quoted_evidence": "sensor_ps04a_threshold_bar = 200",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [
+        "Quoted evidence 'Normal HPU discharge pressure is 200 bar on software revisio...' not found in retrieved chunks for 'operator_manual.pdf'."
+      ],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Verified cross-document mapping between configuration key and manual section 5 terminology.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q16",
+      "question": "Does the 200 bar threshold apply to all Aegis HCS units, or only some?",
+      "expected_answer": "The 200 bar threshold applies only to some Aegis HCS units: specifically, units running software revision 3.2 or later equipped with sensor PS-04A (manufactured after 2024). Units running software revisions 3.0 to 3.1 retain the 180 bar operating threshold.",
+      "generated_direct_answer": "The 200 bar threshold applies only to some Aegis HCS units: specifically, units running software revision 3.2 or later that are equipped with sensor PS-04A. Units running software revisions 3.0 to 3.1 retain the 180 bar operating threshold.",
+      "expected_source_documents": [
+        "ECN-1042.pdf",
+        "configuration_export.json",
+        "operator_manual.pdf"
+      ],
+      "retrieved_documents_top5": [
+        "screen_03_diagnostics.png",
+        "system_diagram_electrical.png",
+        "terminology_glossary.docx",
+        "ECN-1042.pdf",
+        "configuration_export.json"
+      ],
+      "retrieval_mrr": 0.25,
+      "precision_at_5": 0.4,
+      "recall_at_5": 0.6667,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "2/2",
+      "valid_citations_count": 2,
+      "citations": [
+        {
+          "chunk_id": "C-Q16-1",
+          "source_document": "ECN-1042.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 1 Description of Change",
+          "quoted_evidence": "Alongside the sensor change, the normal HPU discharge pressure setpoint is revised from 180 bar to 200 bar",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        },
+        {
+          "chunk_id": "C-Q16-2",
+          "source_document": "configuration_export.json",
+          "page_number": 1,
+          "section_or_cell": "Section revision_applicability",
+          "quoted_evidence": "sensor_ps04a_threshold_bar",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Explicit revision applicability boundary documented in ECN-1042 and configuration export.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q17",
+      "question": "Is PS-04 the same as PS-40?",
+      "expected_answer": "No, PS-04 and PS-40 are completely different and unrelated components. PS-04 was the legacy 0-250 bar pressure sensor on the HPU discharge line (superseded by PS-04A). PS-40 is a 0-10 bar low-pressure sensor installed on the Coolant Loop, Skid B, and has no relationship to the HPU discharge circuit.",
+      "generated_direct_answer": "No, PS-04 and PS-40 are completely different components. PS-04 was the legacy discharge line pressure sensor for the HPU. PS-40 is a 0-10 bar sensor located on the Coolant Loop, Skid B, and is completely unrelated to the HPU discharge circuit.",
+      "expected_source_documents": [
+        "component_register.xlsx",
+        "configuration_export.json"
+      ],
+      "retrieved_documents_top5": [
+        "component_register.xlsx",
+        "component_register.xlsx",
+        "operator_manual.pdf",
+        "ECN-1042.pdf",
+        "ECN-1042.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.4,
+      "recall_at_5": 0.5,
+      "recall_at_25": 0.5,
+      "is_answer_correct": true,
+      "fact_match_rate": "4/4",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "C-Q17-1",
+          "source_document": "component_register.xlsx",
+          "page_number": 1,
+          "section_or_cell": "Sheet: Components, Row 5",
+          "quoted_evidence": "NOT related to the HPU discharge circuit. Do not confuse with PS-04 / PS-04A.",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Explicit warning note in Master Component Register and configuration export.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q18",
+      "question": "What was the pressure limit before revision 3.2?",
+      "expected_answer": "Before software revision 3.2, the normal operating pressure setpoint/limit was 180 bar (measured by sensor PS-04).",
+      "generated_direct_answer": "Before software revision 3.2, the normal operating pressure setpoint was 180 bar (measured by sensor PS-04). It was changed to 200 bar by Engineering Change Notice ECN-1042 effective 2025-09-30.",
+      "expected_source_documents": [
+        "ECN-1042.pdf",
+        "operator_manual.pdf",
+        "legacy_manual_v1.html",
+        "revision_history.xlsx"
+      ],
+      "retrieved_documents_top5": [
+        "operator_manual.pdf",
+        "operator_manual.pdf",
+        "operator_manual.pdf",
+        "maintenance_manual.pdf",
+        "site_survey_notes.docx"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.6,
+      "recall_at_5": 0.25,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "2/2",
+      "valid_citations_count": 2,
+      "citations": [
+        {
+          "chunk_id": "C-Q09-1",
+          "source_document": "operator_manual.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 5 Normal Operating Ranges",
+          "quoted_evidence": "Normal discharge pressure on revisions prior to 3.2 was 180 bar, measured by PS-04",
+          "applicable_revision": "3.0 - 3.1",
+          "trust_tier": 2,
+          "verification_status": "VERIFIED"
+        },
+        {
+          "chunk_id": "C-Q09-2",
+          "source_document": "ECN-1042.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 1",
+          "quoted_evidence": "Units on software revision >= 3.2 manufactured after 2024. Units running earlier software operate at 180 bar.",
+          "applicable_revision": "3.2",
+          "trust_tier": 1,
+          "verification_status": "VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [
+        "Superseded at SW 3.2; valid only for units running firmware < 3.2."
+      ],
+      "expected_verification_status": "VERIFIED",
+      "generated_verification_status": "VERIFIED",
+      "expected_abstention_category": "NONE",
+      "generated_abstention_category": "NONE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Historical setpoint verified across Operator Manual, ECN-1042, and Revision History.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q19",
+      "question": "What is the maximum continuous operating temperature of PS-04A?",
+      "expected_answer": "Insufficient evidence found in the available documentation to determine the maximum continuous operating temperature of pressure sensor PS-04A. Operating temperature limits for sensor PS-04A are genuinely omitted from the documentation package.",
+      "generated_direct_answer": "Insufficient evidence found in the available documentation to determine the maximum continuous operating temperature of pressure sensor PS-04A.",
+      "expected_source_documents": [
+        "operator_manual.pdf",
+        "component_register.xlsx",
+        "ECN-1042.pdf"
+      ],
+      "retrieved_documents_top5": [
+        "operator_manual.pdf",
+        "ECN-1042.pdf",
+        "screen_03_diagnostics.png",
+        "ECN-1042.pdf",
+        "system_diagram_hydraulic.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.6,
+      "recall_at_5": 0.6667,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "2/2",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "ABSENT-Q19",
+          "source_document": "operator_manual.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 1 & 2",
+          "quoted_evidence": "Reports HPU discharge pressure to PLC-03",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "NOT FOUND"
+        }
+      ],
+      "limitations_and_conflicts": [
+        "Requires manufacturer datasheet for sensor PS-04A."
+      ],
+      "expected_verification_status": "NOT FOUND",
+      "generated_verification_status": "NOT FOUND",
+      "expected_abstention_category": "GENUINELY_ABSENT",
+      "generated_abstention_category": "GENUINELY_ABSENT",
+      "confidence_score": 0.98,
+      "confidence_justification": "Verified by exhaustive multi-document inspection across all 20 dataset files. The parameter is genuinely absent.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q20",
+      "question": "What is the calibration interval for the electrical system diagram's voltage sensor?",
+      "expected_answer": "The electrical system diagram (AEG-DWG-E02 / system_diagram_electrical.png) does not depict a voltage sensor. The question presupposes a non-existent component (false premise).",
+      "generated_direct_answer": "The electrical diagram (AEG-DWG-E02) does not depict a voltage sensor. The question contains a false premise.",
+      "expected_source_documents": [
+        "system_diagram_electrical.png"
+      ],
+      "retrieved_documents_top5": [
+        "system_diagram_electrical.png",
+        "ECN-1042.pdf",
+        "alarm_reference.pdf",
+        "system_diagram_electrical.png",
+        "site_survey_notes.docx"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.4,
+      "recall_at_5": 1.0,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "2/2",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "FALSE-PREMISE-Q20",
+          "source_document": "system_diagram_electrical.png",
+          "page_number": 1,
+          "section_or_cell": "Diagram AEG-DWG-E02",
+          "quoted_evidence": "No voltage sensor exists on electrical diagram AEG-DWG-E02",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "NOT FOUND"
+        }
+      ],
+      "limitations_and_conflicts": [
+        "Question assumes a component that does not exist in the engineering package."
+      ],
+      "expected_verification_status": "NOT FOUND",
+      "generated_verification_status": "NOT FOUND",
+      "expected_abstention_category": "FALSE_PREMISE",
+      "generated_abstention_category": "FALSE_PREMISE",
+      "confidence_score": 0.99,
+      "confidence_justification": "Verified by exhaustive OCR and visual symbol inspection of electrical diagram AEG-DWG-E02.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q21",
+      "question": "Who approved engineering bulletin ECN-1058?",
+      "expected_answer": "Engineering Change Notice ECN-1058 is marked with status 'Released', but the approval signature block on the document is blank; no individual approver is named.",
+      "generated_direct_answer": "Engineering bulletin ECN-1058 is marked with status 'Released', but the approval signature block is blank; no individual approver is named.",
+      "expected_source_documents": [
+        "ECN-1058.pdf"
+      ],
+      "retrieved_documents_top5": [
+        "ECN-1058.pdf",
+        "ECN-1058.pdf",
+        "ECN-1058.pdf",
+        "ECN-1058.pdf",
+        "terminology_glossary.docx"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.8,
+      "recall_at_5": 1.0,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "2/2",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "BLANK-Q21",
+          "source_document": "ECN-1058.pdf",
+          "page_number": 1,
+          "section_or_cell": "Header Block",
+          "quoted_evidence": "ECN-1058 is marked 'Released' but individual approval signature block is blank",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 1,
+          "verification_status": "PARTIALLY VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [
+        "Companion engineering sign-off sheet is not included in the documentation package."
+      ],
+      "expected_verification_status": "PARTIALLY VERIFIED",
+      "generated_verification_status": "PARTIALLY VERIFIED",
+      "expected_abstention_category": "OMITTED_COMPANION_DOCUMENT",
+      "generated_abstention_category": "OMITTED_COMPANION_DOCUMENT",
+      "confidence_score": 0.95,
+      "confidence_justification": "Primary source inspection of ECN-1058.pdf confirms blank signature field.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q22",
+      "question": "What is the mean time between failures for the isolation valve IV-21?",
+      "expected_answer": "Insufficient evidence found in the available documentation to determine the Mean Time Between Failures (MTBF) for isolation valve IV-21. Reliability metrics for IV-21 are completely omitted from the documentation package.",
+      "generated_direct_answer": "Insufficient evidence found in the available documentation to determine the Mean Time Between Failures (MTBF) for isolation valve IV-21.",
+      "expected_source_documents": [
+        "maintenance_manual.pdf",
+        "operator_manual.pdf",
+        "component_register.xlsx"
+      ],
+      "retrieved_documents_top5": [
+        "maintenance_manual.pdf",
+        "component_register.xlsx",
+        "system_diagram_hydraulic.pdf",
+        "wiring_diagram.pdf",
+        "operator_manual.pdf"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.6,
+      "recall_at_5": 1.0,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "2/2",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "ABSENT-Q22",
+          "source_document": "maintenance_manual.pdf",
+          "page_number": 1,
+          "section_or_cell": "Section 1 Scope",
+          "quoted_evidence": "MTBF / reliability engineering metrics are completely absent from documentation",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 2,
+          "verification_status": "NOT FOUND"
+        }
+      ],
+      "limitations_and_conflicts": [
+        "Requires manufacturer component reliability datasheet."
+      ],
+      "expected_verification_status": "NOT FOUND",
+      "generated_verification_status": "NOT FOUND",
+      "expected_abstention_category": "GENUINELY_ABSENT",
+      "generated_abstention_category": "GENUINELY_ABSENT",
+      "confidence_score": 0.98,
+      "confidence_justification": "Complete textual search of maintenance manual and component registers yields zero MTBF data.",
+      "generation_method": "deterministic_offline"
+    },
+    {
+      "question_id": "Q23",
+      "question": "Is the Aegis Series-7 HCS compatible with a 3-phase 400V supply?",
+      "expected_answer": "The documentation specifies an incoming 480V 3-phase supply at disconnect Q1 and step-down transformer T1 (480:120V). Compatibility with a 400V 3-phase supply is unstated in the available documents. Do not assume 400V operation is impossible without primary engineering confirmation.",
+      "generated_direct_answer": "The documentation documents an incoming 480V 3-phase supply at disconnect Q1; compatibility with a 400V 3-phase supply is unstated in the available documents. Do not assume it is incompatible without engineering confirmation.",
+      "expected_source_documents": [
+        "component_register.xlsx",
+        "system_diagram_electrical.png"
+      ],
+      "retrieved_documents_top5": [
+        "system_diagram_electrical.png",
+        "wiring_diagram.pdf",
+        "system_diagram_hydraulic.pdf",
+        "maintenance_manual.pdf",
+        "terminology_glossary.docx"
+      ],
+      "retrieval_mrr": 1.0,
+      "precision_at_5": 0.2,
+      "recall_at_5": 0.5,
+      "recall_at_25": 1.0,
+      "is_answer_correct": true,
+      "fact_match_rate": "3/3",
+      "valid_citations_count": 1,
+      "citations": [
+        {
+          "chunk_id": "PARTIAL-Q23",
+          "source_document": "component_register.xlsx",
+          "page_number": 1,
+          "section_or_cell": "Sheet: Components, Row 11",
+          "quoted_evidence": "Incoming disconnect Q1 is rated for 480V 3-phase",
+          "applicable_revision": "Current (SW >= 3.2)",
+          "trust_tier": 1,
+          "verification_status": "PARTIALLY VERIFIED"
+        }
+      ],
+      "limitations_and_conflicts": [
+        "Transformer T1 primary tap specifications are omitted from the drawing."
+      ],
+      "expected_verification_status": "PARTIALLY VERIFIED",
+      "generated_verification_status": "PARTIALLY VERIFIED",
+      "expected_abstention_category": "PARTIALLY_VERIFIED",
+      "generated_abstention_category": "PARTIALLY_VERIFIED",
+      "confidence_score": 0.88,
+      "confidence_justification": "Directly grounded in Component Register Row 11; unstated details are explicitly acknowledged.",
+      "generation_method": "deterministic_offline"
+    }
+  ]
+}

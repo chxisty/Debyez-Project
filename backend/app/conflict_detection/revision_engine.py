@@ -96,15 +96,20 @@ class RevisionEngine:
 
         # Check lower bound [start, ...)
         if fact.applicable_revision_start:
-            s_rev = cls.parse_version(fact.applicable_revision_start)
-            if s_rev and cls.compare_versions(target_revision, fact.applicable_revision_start) < 0:
-                return False
+            s_str = str(fact.applicable_revision_start).strip()
+            # Document publication editions (e.g. 'Rev 4', 'Rev 5') do not filter software releases
+            if not re.match(r"^Rev\s*\d+$", s_str, re.IGNORECASE):
+                s_rev = cls.parse_version(fact.applicable_revision_start)
+                if s_rev and cls.compare_versions(target_revision, fact.applicable_revision_start) < 0:
+                    return False
 
         # Check upper bound (... , end) - half-open upper boundary
         if fact.applicable_revision_end:
-            e_rev = cls.parse_version(fact.applicable_revision_end)
-            if e_rev and cls.compare_versions(target_revision, fact.applicable_revision_end) >= 0:
-                return False
+            e_str = str(fact.applicable_revision_end).strip()
+            if not re.match(r"^Rev\s*\d+$", e_str, re.IGNORECASE):
+                e_rev = cls.parse_version(fact.applicable_revision_end)
+                if e_rev and cls.compare_versions(target_revision, fact.applicable_revision_end) >= 0:
+                    return False
 
         return True
 
