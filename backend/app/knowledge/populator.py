@@ -380,13 +380,14 @@ def populate_database(db: KnowledgeDatabase):
             notes="WARNING: Do not start unit with maintenance access panel removed."
         ),
 
-        # CLM-02 / Q02, Q14, Q15, Q16: Normal operating pressure (Current SW 3.2+)
+        # CLM-02 / Q02, Q14, Q15, Q16: Normal operating pressure setpoint (Current SW 3.2+)
         FactEntity(
             fact_id="FACT-05",
             subject="HPU",
             predicate="normal_operating_pressure",
             object_value="200",
             unit="bar",
+            fact_type="specified_setpoint",
             applicable_revision_start="3.2",
             is_current=True,
             provenance=ProvenanceRecord(
@@ -400,13 +401,14 @@ def populate_database(db: KnowledgeDatabase):
             notes="Normal HPU discharge pressure setpoint revised from 180 bar to 200 bar effective SW 3.2."
         ),
 
-        # CLM-03 / Q09, Q16, Q18: Historical operating pressure (SW 3.0 - 3.1)
+        # CLM-03 / Q09, Q16, Q18: Historical operating pressure setpoint (SW 3.0 - 3.1)
         FactEntity(
             fact_id="FACT-06",
             subject="HPU",
             predicate="normal_operating_pressure",
             object_value="180",
             unit="bar",
+            fact_type="historical_setpoint",
             applicable_revision_start="3.0",
             applicable_revision_end="3.2",
             is_current=False,
@@ -421,13 +423,14 @@ def populate_database(db: KnowledgeDatabase):
             notes="Normal discharge pressure on revisions prior to 3.2 was 180 bar, measured by PS-04."
         ),
 
-        # CLM-03 / Field Notes informal discrepancy
+        # CLM-03 / Field Notes informal observed measurement
         FactEntity(
             fact_id="FACT-07",
             subject="HPU",
-            predicate="normal_operating_pressure",
+            predicate="observed_field_pressure_measurement",
             object_value="175",
             unit="bar",
+            fact_type="observed_measurement",
             applicable_revision_start="3.2",
             is_current=False,
             provenance=ProvenanceRecord(
@@ -438,7 +441,7 @@ def populate_database(db: KnowledgeDatabase):
                 confidence=0.85
             ),
             verification_status=VerificationStatus.PARTIALLY_VERIFIED,
-            notes="Informal observation by J. Torres using uncalibrated local gauge; unverified field note."
+            notes="Informal observation by J. Torres using uncalibrated local gauge; recorded during normal operational run on Line 4 (field service notes). Preserved as field observation with low reliability."
         ),
 
         # CLM-04 / Q03, Q10: Alarm A17 condition and threshold

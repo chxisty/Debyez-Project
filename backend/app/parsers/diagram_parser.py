@@ -4,7 +4,7 @@ Extracts vector drawing topology, electrical wiring paths, and schematic connect
 """
 from pathlib import Path
 from typing import List
-import fitz
+import pymupdf as fitz
 from rapidocr_onnxruntime import RapidOCR
 
 from backend.app.parsers.base_parser import (

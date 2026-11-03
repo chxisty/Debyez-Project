@@ -31,6 +31,9 @@ class DocumentEntity(BaseModel):
     effective_date: Optional[str] = None
     trust_level: int = Field(..., description="1 (Master/ECN) to 6 (Noise)")
     is_active: bool = True
+    is_archived: bool = False
+    archived_at: Optional[str] = None
+    archival_reason: Optional[str] = None
     sha256_hash: Optional[str] = None
     metadata: Dict[str, Any] = Field(default_factory=dict)
 
@@ -51,9 +54,11 @@ class FactEntity(BaseModel):
     predicate: str  # e.g., 'normal_operating_pressure', 'startup_required_state', 'alarm_threshold'
     object_value: str  # e.g., '200', 'OPEN', '150'
     unit: Optional[str] = None  # e.g., 'bar', 'seconds', 'V', 'mA'
+    fact_type: str = "specified_setpoint"  # 'specified_setpoint', 'historical_setpoint', 'observed_measurement', 'rule', etc.
     applicable_revision_start: Optional[str] = None  # e.g., '3.2'
     applicable_revision_end: Optional[str] = None  # e.g., '3.2' or None (open-ended)
     is_current: bool = True  # Distinguishes current vs historical values
+    is_archived: bool = False
     provenance: ProvenanceRecord
     verification_status: VerificationStatus = VerificationStatus.VERIFIED
     notes: Optional[str] = None
@@ -66,12 +71,14 @@ class RelationshipEntity(BaseModel):
     line_type: Optional[str] = None  # 'solid_purple', 'solid_grey', 'solid_tan', 'wiring_lead'
     endpoints: Optional[str] = None  # e.g., '(230.4, 231.8) -> (187.2, 324.0)'
     drawing_reference: Optional[str] = None  # e.g., 'AEG-DWG-H01'
+    is_archived: bool = False
     provenance: ProvenanceRecord
     notes: Optional[str] = None
 
 class ConflictResolutionType(str, Enum):
     RESOLVED_BY_REVISION = "RESOLVED_BY_REVISION"
     RESOLVED_BY_SOURCE_TRUST = "RESOLVED_BY_SOURCE_TRUST"
+    MEASUREMENT_VS_SPECIFICATION = "MEASUREMENT_VS_SPECIFICATION"
     UNRESOLVED_DISCREPANCY = "UNRESOLVED_DISCREPANCY"
 
 class ConflictEntity(BaseModel):

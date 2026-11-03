@@ -4,7 +4,7 @@ Preserves page numbers, headings, warnings, and tabular sections.
 """
 from pathlib import Path
 from typing import List
-import fitz
+import pymupdf as fitz
 from backend.app.parsers.base_parser import BaseParser, ExtractedDocument, DocumentBlock, TableBlock, BlockType
 from backend.app.config import DOCUMENT_METADATA_REGISTRY, TrustTier
 

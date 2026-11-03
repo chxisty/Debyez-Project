@@ -56,6 +56,14 @@ class ConflictDetector:
                     if f1.object_value.strip().lower() == f2.object_value.strip().lower():
                         continue
 
+                    # Semantic compatibility check:
+                    # Do not classify an observed field measurement as contradicted by an official setpoint.
+                    # Observations and specifications represent distinct information types.
+                    types = {f1.fact_type, f2.fact_type}
+                    if "observed_measurement" in types and ("specified_setpoint" in types or "historical_setpoint" in types):
+                        # Preserve field measurement independently; do not generate false conflict
+                        continue
+
                     # Evaluate conflict resolution
                     conflict = self._analyze_pair(f1, f2)
                     if conflict:
