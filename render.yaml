@@ -1,23 +1,22 @@
 services:
+  # Backend FastAPI Web Service
   - type: web
     name: aegis-backend
     env: python
     region: oregon
-    plan: standard
-    buildCommand: pip install -r backend/requirements.txt
+    plan: free
+    buildCommand: pip install -r requirements.txt
     startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.0
       - key: AEGIS_BACKEND_HOST
         value: 0.0.0.0
-      - key: AEGIS_BACKEND_PORT
-        value: 8000
-    disk:
-      name: aegis-data
-      mountPath: /app/data
-      sizeGB: 1
+      - key: AEGIS_LLM_PROVIDER
+        value: offline
 
+  # Frontend Next.js Web Service
   - type: web
     name: aegis-frontend
     env: node
@@ -32,4 +31,3 @@ services:
           type: web
           name: aegis-backend
           property: host
-
