@@ -1,6 +1,6 @@
 {
   "export_version": "1.0",
-  "export_timestamp": "2026-11-03T23:11:53.942571",
+  "export_timestamp": "2026-11-03T23:58:32.244789",
   "total_documents": 20,
   "total_components": 14,
   "total_facts": 28,
@@ -1516,7 +1516,7 @@
   ],
   "conflicts": [
     {
-      "conflict_id": "CONF-0571A296",
+      "conflict_id": "CONF-17AD9432",
       "fact_1_id": "FACT-05",
       "fact_2_id": "FACT-06",
       "conflicting_parameter": "HPU.normal_operating_pressure",
