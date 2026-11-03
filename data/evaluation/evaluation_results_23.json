@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "evaluation_timestamp": "2026-11-03T22:36:30.276293",
+    "evaluation_timestamp": "2026-11-03T23:11:23.766330",
     "total_questions_evaluated": 23,
     "target_top_k": 25,
     "embedding_model": "BAAI/bge-small-en-v1.5",

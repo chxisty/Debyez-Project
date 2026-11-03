@@ -7,8 +7,9 @@ import json
 from datetime import datetime
 from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, HTTPException, Query
+from fastapi.responses import FileResponse
 
-from backend.app.config import DOCUMENT_METADATA_REGISTRY
+from backend.app.config import DOCUMENT_METADATA_REGISTRY, DATA_DIR
 from backend.app.knowledge.database import KnowledgeDatabase
 from backend.app.answer_generation.engine import AnswerEngine
 from backend.app.answer_generation.schema import GroundedAnswer
@@ -106,6 +107,15 @@ def list_documents() -> List[DocumentListItem]:
         ))
     items.sort(key=lambda x: (x.trust_tier, x.filename))
     return items
+
+@router.get("/api/documents/{filename}/raw", tags=["Document Explorer"])
+def get_raw_document(filename: str):
+    """Serves the actual raw source file from aegis-dataset for direct inspection."""
+    for p in DATA_DIR.rglob(filename):
+        if p.is_file():
+            return FileResponse(p)
+    raise HTTPException(status_code=404, detail=f"File '{filename}' not found in dataset")
+
 
 @router.get("/api/components", tags=["Component Explorer"])
 def list_components() -> List[Dict[str, Any]]:

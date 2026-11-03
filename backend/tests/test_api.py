@@ -155,7 +155,17 @@ def test_diagram_endpoint(client):
     assert "IV-21" in targets
     # Verify tan line to Auxiliary Reservoir
     tan_conns = [c for c in data["connections"] if "tan" in c["line_type"]]
-    assert len(tan_conns) >= 1
+    assert tan_conns
     assert any(c["target"] == "AUX_RESERVOIR" for c in tan_conns)
+
+def test_raw_document_endpoint_success(client):
+    res = client.get("/api/documents/ECN-1042.pdf/raw")
+    assert res.status_code == 200
+    assert len(res.content) > 1000
+
+def test_raw_document_endpoint_not_found(client):
+    res = client.get("/api/documents/non_existent_file.pdf/raw")
+    assert res.status_code == 404
+
 
 

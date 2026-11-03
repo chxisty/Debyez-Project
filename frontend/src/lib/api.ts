@@ -127,49 +127,31 @@ export interface RevisionItem {
   status: string;
 }
 
-export interface CitationItem {
-  citation_id: string;
-  document_title: string;
-  document_id: string;
+export interface EvidenceCitation {
+  chunk_id: string;
+  source_document: string;
   page_number: number;
-  section: string | null;
-  cell_or_bbox: string | null;
-  extraction_method: string;
-  exact_quote_or_excerpt: string;
-  source_trust_level: number;
+  section_or_cell: string | null;
+  quoted_evidence: string;
+  applicable_revision: string | null;
+  trust_tier: number;
   verification_status: string;
-}
-
-export interface ClaimItem {
-  claim_id: string;
-  claim_text: string;
-  verification_status: string;
-  confidence: number;
-  citation_ids: string[];
-}
-
-export interface EpistemicAbstention {
-  is_abstained: boolean;
-  category: string | null;
-  rationale: string | null;
-  safety_warning: string | null;
 }
 
 export interface GroundedAnswer {
-  answer_id: string;
-  query: string;
-  target_revision: string;
+  question_id: string | null;
+  question: string;
   direct_answer: string;
-  overall_status: "VERIFIED" | "PARTIALLY VERIFIED" | "CONFLICTING" | "NOT FOUND";
-  claims: ClaimItem[];
-  citations: CitationItem[];
-  negative_disambiguations: string[];
-  epistemic_abstention: EpistemicAbstention;
-  retrieval_metadata: {
-    total_chunks_considered: number;
-    sources_consulted: string[];
-    execution_time_ms: number;
-  };
+  supporting_claims: string[];
+  citations: EvidenceCitation[];
+  applicable_revision: string;
+  verification_status: "VERIFIED" | "PARTIALLY VERIFIED" | "CONFLICTING" | "NOT FOUND";
+  abstention_category: string;
+  abstention_explanation: string | null;
+  confidence_score: number;
+  confidence_justification: string;
+  limitations_and_conflicts: string[];
+  generation_method: string;
 }
 
 export interface DiagramElement {
@@ -205,62 +187,74 @@ export interface DiagramResponse {
 
 export interface EvaluationItemResult {
   question_id: string;
-  question_text: string;
-  category: string;
-  applicable_revision: string;
-  ground_truth: {
-    expected_answer_summary: string;
-    expected_verification_status: string;
-    expected_sources: string[];
-    is_expected_abstention: boolean;
-    abstention_category: string | null;
-  };
-  system_response: {
-    direct_answer: string;
-    overall_status: string;
-    is_abstained: boolean;
-    abstention_category: string | null;
-    retrieved_sources: string[];
-  };
-  metrics: {
-    retrieval_hit: boolean;
-    reciprocal_rank: number;
-    answer_correct: boolean;
-    citation_precision: number;
-    citation_recall: number;
-    citation_f1: number;
-    abstention_correct: boolean;
-    hallucination_detected: boolean;
-  };
+  question: string;
+  expected_answer: string;
+  generated_direct_answer: string;
+  expected_source_documents: string[];
+  retrieved_documents_top5: string[];
+  retrieval_mrr: number;
+  precision_at_5: number;
+  recall_at_5: number;
+  recall_at_25?: number;
+  is_answer_correct: boolean;
+  fact_match_rate: string;
+  valid_citations_count: number;
+  citations: Array<{
+    chunk_id: string;
+    source_document: string;
+    page_number: number;
+    section_or_cell: string;
+    quoted_evidence: string;
+    applicable_revision: string;
+    trust_tier: number;
+    verification_status: string;
+  }>;
+  limitations_and_conflicts: string[];
+  expected_verification_status: string;
+  generated_verification_status: string;
+  expected_abstention_category: string;
+  generated_abstention_category: string;
+  confidence_score: number;
+  confidence_justification: string;
+  generation_method: string;
 }
 
 export interface EvaluationSummaryResponse {
-  timestamp: string;
-  software_version: string;
-  total_questions: number;
+  metadata?: {
+    evaluation_timestamp: string;
+    total_questions_evaluated: number;
+    target_top_k: number;
+    embedding_model: string;
+    retrieval_channels: string[];
+    fusion_algorithm: string;
+  };
   aggregate_metrics: {
     retrieval_metrics: {
-      hit_rate_at_1: number;
-      hit_rate_at_3: number;
-      hit_rate_at_5: number;
       mean_reciprocal_rank_mrr: number;
-      average_retrieval_latency_ms: number;
+      hit_rate_at_5: number;
+      hit_rate_at_10: number;
+      hit_rate_at_25: number;
+      precision_at_5: number;
+      precision_at_10: number;
+      precision_at_25: number;
+      recall_at_5: number;
+      recall_at_10: number;
+      recall_at_25: number;
     };
     answer_metrics: {
       answer_correctness_accuracy: number;
+      claim_level_evidence_support: number;
       citation_precision: number;
-      citation_recall: number;
-      citation_f1_score: number;
+      citation_completeness: number;
+      unsupported_claim_rate: number;
       hallucination_rate: number;
     };
     abstention_metrics: {
-      total_unanswerable_questions: number;
-      correct_abstentions: number;
-      false_abstentions: number;
-      abstention_accuracy: number;
-      abstention_precision: number;
-      abstention_recall: number;
-      abstention_f1: number;
+      correct_abstention_rate: number;
+      false_abstention_rate: number;
+      missing_information_detection_accuracy_cat_a: number;
+      false_premise_detection_accuracy_cat_b: number;
+      partial_verification_classification_accuracy_cat_c_d: number;
     };
   };
   itemized_question_results: EvaluationItemResult[];
@@ -315,4 +309,7 @@ export const api = {
         force_offline,
       }),
     }),
+  getRawDocumentUrl: (filename: string) =>
+    `${API_BASE_URL}/api/documents/${encodeURIComponent(filename)}/raw`,
 };
+
