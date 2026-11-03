@@ -72,3 +72,4 @@ class EntityResolver:
     def get_component(self, component_id: str) -> Optional[ComponentEntity]:
         """Retrieves a component by its exact canonical ID."""
         return self.components.get(component_id)
+

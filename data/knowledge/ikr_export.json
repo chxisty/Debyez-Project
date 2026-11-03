@@ -1,6 +1,6 @@
 {
   "export_version": "1.0",
-  "export_timestamp": "2026-11-03T21:17:40.203229",
+  "export_timestamp": "2026-11-03T21:19:27.350023",
   "total_documents": 20,
   "total_components": 14,
   "total_facts": 28,
@@ -1392,20 +1392,7 @@
   ],
   "conflicts": [
     {
-      "conflict_id": "CONF-4A628689",
-      "fact_1_id": "FACT-06",
-      "fact_2_id": "FACT-07",
-      "conflicting_parameter": "HPU.normal_operating_pressure",
-      "value_1": "180 bar",
-      "value_2": "175 bar",
-      "affected_revision": "3.2",
-      "resolution_status": "RESOLVED_BY_REVISION",
-      "explanation": "Historical value '180' bar (valid 3.0 to 3.2) was superseded by '175' bar starting at Revision 3.2 per site_survey_notes.docx.",
-      "source_1": "operator_manual.pdf",
-      "source_2": "site_survey_notes.docx"
-    },
-    {
-      "conflict_id": "CONF-68A039F6",
+      "conflict_id": "CONF-55699B85",
       "fact_1_id": "FACT-05",
       "fact_2_id": "FACT-07",
       "conflicting_parameter": "HPU.normal_operating_pressure",
@@ -1418,7 +1405,7 @@
       "source_2": "site_survey_notes.docx"
     },
     {
-      "conflict_id": "CONF-F0486C4B",
+      "conflict_id": "CONF-706C8D08",
       "fact_1_id": "FACT-05",
       "fact_2_id": "FACT-06",
       "conflicting_parameter": "HPU.normal_operating_pressure",
@@ -1429,6 +1416,19 @@
       "explanation": "Historical value '180' bar (valid 3.0 to 3.2) was superseded by '200' bar starting at Revision 3.2 per ECN-1042.pdf.",
       "source_1": "ECN-1042.pdf",
       "source_2": "operator_manual.pdf"
+    },
+    {
+      "conflict_id": "CONF-E62876E9",
+      "fact_1_id": "FACT-06",
+      "fact_2_id": "FACT-07",
+      "conflicting_parameter": "HPU.normal_operating_pressure",
+      "value_1": "180 bar",
+      "value_2": "175 bar",
+      "affected_revision": "3.2",
+      "resolution_status": "RESOLVED_BY_REVISION",
+      "explanation": "Historical value '180' bar (valid 3.0 to 3.2) was superseded by '175' bar starting at Revision 3.2 per site_survey_notes.docx.",
+      "source_1": "operator_manual.pdf",
+      "source_2": "site_survey_notes.docx"
     }
   ]
 }

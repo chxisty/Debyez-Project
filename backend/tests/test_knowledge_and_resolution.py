@@ -330,3 +330,4 @@ def test_ikr_export_json_consistency(populated_db):
     # Ensure HPU does not have a purple line
     hpu_purple = [r for r in purple_rels if r.source_component == "PLC-03" and r.target_component == "HPU"]
     assert len(hpu_purple) == 0, "HPU must NOT have a purple direct control line from PLC-03"
+

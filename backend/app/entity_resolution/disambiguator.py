@@ -98,12 +98,21 @@ class EntityDisambiguator:
         # 3. Alias check
         target1 = cls.ALIAS_MAP.get(id1.strip().upper())
         target2 = cls.ALIAS_MAP.get(id2.strip().upper())
-        if target1 and target2 and target1[0] == target2[0]:
+        
+        canon1 = target1[0] if target1 else norm1
+        canon2 = target2[0] if target2 else norm2
+        
+        if canon1 == canon2 and canon1:
+            conf = 1.0
+            if target1:
+                conf = min(conf, target1[2])
+            if target2:
+                conf = min(conf, target2[2])
             return DisambiguationResult(
                 is_same_component=True,
-                canonical_id=target1[0],
-                confidence=min(target1[2], target2[2]),
-                explanation=f"Both '{id1}' and '{id2}' map to canonical component '{target1[0]}'.",
+                canonical_id=canon1,
+                confidence=conf,
+                explanation=f"Both '{id1}' and '{id2}' map to canonical component '{canon1}'.",
                 evidence_document="component_register.xlsx"
             )
 
