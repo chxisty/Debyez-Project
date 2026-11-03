@@ -139,6 +139,28 @@ class KnowledgeDatabase:
             )
             """)
 
+            # Dynamic schema migrations for existing SQLite databases
+            cursor.execute("PRAGMA table_info(documents);")
+            doc_cols = [c[1] for c in cursor.fetchall()]
+            if "is_archived" not in doc_cols:
+                cursor.execute("ALTER TABLE documents ADD COLUMN is_archived BOOLEAN DEFAULT 0;")
+            if "archived_at" not in doc_cols:
+                cursor.execute("ALTER TABLE documents ADD COLUMN archived_at TEXT;")
+            if "archival_reason" not in doc_cols:
+                cursor.execute("ALTER TABLE documents ADD COLUMN archival_reason TEXT;")
+
+            cursor.execute("PRAGMA table_info(facts);")
+            fact_cols = [c[1] for c in cursor.fetchall()]
+            if "fact_type" not in fact_cols:
+                cursor.execute("ALTER TABLE facts ADD COLUMN fact_type TEXT NOT NULL DEFAULT 'specified_setpoint';")
+            if "is_archived" not in fact_cols:
+                cursor.execute("ALTER TABLE facts ADD COLUMN is_archived BOOLEAN DEFAULT 0;")
+
+            cursor.execute("PRAGMA table_info(relationships);")
+            rel_cols = [c[1] for c in cursor.fetchall()]
+            if "is_archived" not in rel_cols:
+                cursor.execute("ALTER TABLE relationships ADD COLUMN is_archived BOOLEAN DEFAULT 0;")
+
             # Indexes for high-speed deterministic lookups
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_facts_subject ON facts(subject);")
             cursor.execute("CREATE INDEX IF NOT EXISTS idx_facts_predicate ON facts(predicate);")

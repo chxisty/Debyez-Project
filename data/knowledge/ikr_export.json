@@ -1,11 +1,11 @@
 {
   "export_version": "1.0",
-  "export_timestamp": "2026-11-03T21:19:27.350023",
+  "export_timestamp": "2026-11-03T21:32:28.860059",
   "total_documents": 20,
   "total_components": 14,
   "total_facts": 28,
   "total_relationships": 8,
-  "total_conflicts": 3,
+  "total_conflicts": 1,
   "documents": [
     {
       "document_id": "ECN-1042",
@@ -17,6 +17,9 @@
       "effective_date": "2025-09-30",
       "trust_level": 1,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "b123d820311549d30c40770c3cf540ebf0ead96ccff4d6ffed878678d4718203",
       "metadata": {
         "relative_path": "engineering_bulletins/ECN-1042.pdf",
@@ -33,6 +36,9 @@
       "effective_date": "2025-11-18",
       "trust_level": 1,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "c0872d612fb851b80f8cfee5803ad5dd61dacd1421f7b15e03c979276a50cd88",
       "metadata": {
         "relative_path": "engineering_bulletins/ECN-1058.pdf",
@@ -49,6 +55,9 @@
       "effective_date": "2025-09-30",
       "trust_level": 1,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "0d7ec1291d5f94e26a516bca378b6a41cbe85c6364f45616002abd9692b438cf",
       "metadata": {
         "relative_path": "reference/component_register.xlsx",
@@ -65,6 +74,9 @@
       "effective_date": "2026-02-03",
       "trust_level": 1,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "ef9625a198508a8f55580582847d06fa7a2931452d22c325b959ba8a864651bd",
       "metadata": {
         "relative_path": "configuration/configuration_export.json",
@@ -81,6 +93,9 @@
       "effective_date": "2025-11-18",
       "trust_level": 1,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "ce4a152d0ff9b9d02281aabc84e1f1f411f42602fdd7f2a451af726a67eae451",
       "metadata": {
         "relative_path": "reference/revision_history.xlsx",
@@ -97,6 +112,9 @@
       "effective_date": "2025-11-18",
       "trust_level": 2,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "9d0d592ad8dd8bbbd0f28a0d21ed55d1bcb1e3338e9dc1e142a758ceb1af8915",
       "metadata": {
         "relative_path": "reference/alarm_reference.pdf",
@@ -113,6 +131,9 @@
       "effective_date": "2025-09-30",
       "trust_level": 2,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "3c8b74fff3264210e25301093e23167923b89ac673f7ddd8a6921e267d19e2ba",
       "metadata": {
         "relative_path": "manuals/maintenance_manual.pdf",
@@ -129,6 +150,9 @@
       "effective_date": "2025-09-30",
       "trust_level": 2,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "d2e205191f1f8775a207c1b239e7c25ced7fd094f4acc3d94c34c89845e5cdc5",
       "metadata": {
         "relative_path": "manuals/operator_manual.pdf",
@@ -145,6 +169,9 @@
       "effective_date": "2026-01-09",
       "trust_level": 2,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "0e1548824546ac94a881a0295c21fcf615a4e3b45993c571c291a3e5e70572cd",
       "metadata": {
         "relative_path": "scans/scanned_appendix_calibration.pdf",
@@ -161,6 +188,9 @@
       "effective_date": "2025-09-30",
       "trust_level": 2,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "cdca4f25cf2f29746816c18154b98c47763dca56927a0e27d776bbcb69d56381",
       "metadata": {
         "relative_path": "diagrams/system_diagram_electrical.png",
@@ -177,6 +207,9 @@
       "effective_date": "2025-09-30",
       "trust_level": 2,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "933346844a8ea911287cc111a748f2452d61f5572f4bb210e4fe7f8f45cc0595",
       "metadata": {
         "relative_path": "diagrams/system_diagram_hydraulic.pdf",
@@ -193,6 +226,9 @@
       "effective_date": "2024-03-01",
       "trust_level": 2,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "8f1f0465716144fd44009f27e5d19d4d23335183c42dde8dd80c75eafaff9afe",
       "metadata": {
         "relative_path": "reference/terminology_glossary.docx",
@@ -209,6 +245,9 @@
       "effective_date": "2025-09-30",
       "trust_level": 2,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "e30fc6eea79c62f10b76f5d2f806ff46b89ca471a2babe7468a9eae474ebbab4",
       "metadata": {
         "relative_path": "diagrams/wiring_diagram.pdf",
@@ -225,6 +264,9 @@
       "effective_date": "2026-01-09",
       "trust_level": 3,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "81fa08456f5a399d43f5a32e7915ffae8af6e1089f6c9ae03f1649d4fa17ac8c",
       "metadata": {
         "relative_path": "screenshots/screen_01_home.png",
@@ -241,6 +283,9 @@
       "effective_date": "2026-01-09",
       "trust_level": 3,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "7717ec7cb148c4ebb9c0b3280c0e535b6c8312b6e028f8b6f5417f9b76c080da",
       "metadata": {
         "relative_path": "screenshots/screen_02_alarms.png",
@@ -257,6 +302,9 @@
       "effective_date": "2026-01-09",
       "trust_level": 3,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "0ba0bb696883f32d4e7b5db5f258b89a70f4d2a3535c7dc0da7450c5394b91f4",
       "metadata": {
         "relative_path": "screenshots/screen_03_diagnostics.png",
@@ -273,6 +321,9 @@
       "effective_date": "2025-06-01",
       "trust_level": 3,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "f4157c2c5a24d25f4b48f0677170cb1bc1e4bc732c48499ec0c12c6eb2a41b82",
       "metadata": {
         "relative_path": "extra/training_slide_excerpt.pptx",
@@ -289,6 +340,9 @@
       "effective_date": "2023-06-02",
       "trust_level": 4,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "edf3c3eaa7e32814be0c733af26fc746ebc4057ce4d954950e9b8c3b6ecbeb96",
       "metadata": {
         "relative_path": "manuals/legacy_manual_v1.html",
@@ -305,6 +359,9 @@
       "effective_date": "Unknown",
       "trust_level": 5,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "e272f04accec35ac2948c2ceade2cb0daa98255e7286099892b823868d1b093a",
       "metadata": {
         "relative_path": "low_trust/site_survey_notes.docx",
@@ -321,6 +378,9 @@
       "effective_date": "2025-02-11",
       "trust_level": 6,
       "is_active": true,
+      "is_archived": false,
+      "archived_at": null,
+      "archival_reason": null,
       "sha256_hash": "436887ad5b0f610fa14c9594c87847999ebc0ee61b917ea2297439759f1001a5",
       "metadata": {
         "relative_path": "noise/safety_data_sheet_hydraulic_fluid.pdf",
@@ -689,9 +749,11 @@
       "predicate": "trigger_threshold",
       "object_value": "< 150",
       "unit": "bar",
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "alarm_reference.pdf",
         "page_number": 1,
@@ -709,9 +771,11 @@
       "predicate": "panel_color",
       "object_value": "RED",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "alarm_reference.pdf",
         "page_number": 1,
@@ -729,9 +793,11 @@
       "predicate": "possible_causes",
       "object_value": "1. IV-21 closed or partially closed; 2. Low hydraulic fluid; 3. Pressure sensor signal invalid",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "alarm_reference.pdf",
         "page_number": 1,
@@ -749,9 +815,11 @@
       "predicate": "persistent_action",
       "object_value": "Execute Shutdown Procedure 4.7 if persistent > 10 seconds (close IV-21, confirm pressure decay, set POWER to OFF, tag out)",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "maintenance_manual.pdf",
         "page_number": 1,
@@ -769,9 +837,11 @@
       "predicate": "training_deck_introduction",
       "object_value": "Auxiliary Reservoir is introduced in training deck as Line 4/5 specific detail for peak demand top-up; explicitly omitted from standard Operator Manual",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "training_slide_excerpt.pptx",
         "page_number": 1,
@@ -789,9 +859,11 @@
       "predicate": "approver_signature",
       "object_value": "OMITTED_BLANK",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "ECN-1058.pdf",
         "page_number": 1,
@@ -809,9 +881,11 @@
       "predicate": "voltage_sensor_calibration_interval",
       "object_value": "FALSE_PREMISE_NOT_PRESENT",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "system_diagram_electrical.png",
         "page_number": 1,
@@ -829,9 +903,11 @@
       "predicate": "startup_interlock_iv21",
       "object_value": "OPEN",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "operator_manual.pdf",
         "page_number": 1,
@@ -849,9 +925,11 @@
       "predicate": "startup_interlock_fluid_level",
       "object_value": "NORMAL",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "operator_manual.pdf",
         "page_number": 1,
@@ -869,9 +947,11 @@
       "predicate": "startup_interlock_estop",
       "object_value": "RESET",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "operator_manual.pdf",
         "page_number": 1,
@@ -889,9 +969,11 @@
       "predicate": "startup_interlock_access_panel",
       "object_value": "CLOSED",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "operator_manual.pdf",
         "page_number": 1,
@@ -909,9 +991,11 @@
       "predicate": "normal_operating_pressure",
       "object_value": "200",
       "unit": "bar",
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": "3.2",
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "ECN-1042.pdf",
         "page_number": 1,
@@ -929,9 +1013,11 @@
       "predicate": "normal_operating_pressure",
       "object_value": "180",
       "unit": "bar",
+      "fact_type": "historical_setpoint",
       "applicable_revision_start": "3.0",
       "applicable_revision_end": "3.2",
       "is_current": false,
+      "is_archived": false,
       "provenance": {
         "source_document": "operator_manual.pdf",
         "page_number": 1,
@@ -946,12 +1032,14 @@
     {
       "fact_id": "FACT-07",
       "subject": "HPU",
-      "predicate": "normal_operating_pressure",
+      "predicate": "observed_field_pressure_measurement",
       "object_value": "175",
       "unit": "bar",
+      "fact_type": "observed_measurement",
       "applicable_revision_start": "3.2",
       "applicable_revision_end": null,
       "is_current": false,
+      "is_archived": false,
       "provenance": {
         "source_document": "site_survey_notes.docx",
         "page_number": 1,
@@ -961,7 +1049,7 @@
         "confidence": 0.85
       },
       "verification_status": "PARTIALLY VERIFIED",
-      "notes": "Informal observation by J. Torres using uncalibrated local gauge; unverified field note."
+      "notes": "Informal observation by J. Torres using uncalibrated local gauge; recorded during normal operational run on Line 4 (field service notes). Preserved as field observation with low reliability."
     },
     {
       "fact_id": "FACT-22",
@@ -969,9 +1057,11 @@
       "predicate": "operating_pressure_applicability",
       "object_value": "Units on software revision >= 3.2 manufactured after 2024. Units running earlier software operate at 180 bar.",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "ECN-1042.pdf",
         "page_number": 1,
@@ -989,9 +1079,11 @@
       "predicate": "location",
       "object_value": "Hydraulic Module",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "component_register.xlsx",
         "page_number": 1,
@@ -1009,9 +1101,11 @@
       "predicate": "mean_time_between_failures",
       "object_value": "NOT_FOUND",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "maintenance_manual.pdf",
         "page_number": 1,
@@ -1029,9 +1123,11 @@
       "predicate": "safe_reset_condition",
       "object_value": "Hydraulic pressure must be below 50 bar. Do NOT reset while pressure > 50 bar.",
       "unit": "bar",
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "operator_manual.pdf",
         "page_number": 2,
@@ -1049,9 +1145,11 @@
       "predicate": "direct_schematic_connections",
       "object_value": "PS-04A and IV-21 (purple control/signal lines)",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "system_diagram_hydraulic.pdf",
         "page_number": 1,
@@ -1069,9 +1167,11 @@
       "predicate": "identity_distinction",
       "object_value": "NOT identical to PS-04A. PS-04A has updated signal conditioning to correct 18-month drift, requires FW >= 3.2, and is not a form-fit-function replacement.",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": false,
+      "is_archived": false,
       "provenance": {
         "source_document": "ECN-1042.pdf",
         "page_number": 1,
@@ -1089,9 +1189,11 @@
       "predicate": "introducing_document",
       "object_value": "ECN-1042",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "ECN-1042.pdf",
         "page_number": 1,
@@ -1109,9 +1211,11 @@
       "predicate": "required_firmware_version",
       "object_value": ">= 3.2",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "ECN-1042.pdf",
         "page_number": 1,
@@ -1129,9 +1233,11 @@
       "predicate": "diagnostics_screen_tag",
       "object_value": "P.S.04-A",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "screen_03_diagnostics.png",
         "page_number": 1,
@@ -1149,9 +1255,11 @@
       "predicate": "continuous_operating_temperature_max",
       "object_value": "NOT_FOUND",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "operator_manual.pdf",
         "page_number": 1,
@@ -1169,9 +1277,11 @@
       "predicate": "identity_distinction",
       "object_value": "Located on Coolant Loop, Skid B. Completely unrelated to HPU discharge circuit. 0-10 bar sensor.",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "component_register.xlsx",
         "page_number": 1,
@@ -1189,9 +1299,11 @@
       "predicate": "incoming_power_rating",
       "object_value": "480V, 3-Phase",
       "unit": "V",
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "component_register.xlsx",
         "page_number": 1,
@@ -1209,9 +1321,11 @@
       "predicate": "release_date",
       "object_value": "2025-09-30",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "revision_history.xlsx",
         "page_number": 1,
@@ -1229,9 +1343,11 @@
       "predicate": "manual_terminology_correspondence",
       "object_value": "Normal operating pressure (or normal HPU discharge pressure setpoint = 200 bar)",
       "unit": null,
+      "fact_type": "specified_setpoint",
       "applicable_revision_start": null,
       "applicable_revision_end": null,
       "is_current": true,
+      "is_archived": false,
       "provenance": {
         "source_document": "configuration_export.json",
         "page_number": 1,
@@ -1253,6 +1369,7 @@
       "line_type": "solid_grey",
       "endpoints": "(302.4, 345.6) -> (302.4, 403.2)",
       "drawing_reference": "AEG-DWG-H01",
+      "is_archived": false,
       "provenance": {
         "source_document": "system_diagram_hydraulic.pdf",
         "page_number": 1,
@@ -1271,6 +1388,7 @@
       "line_type": "solid_tan",
       "endpoints": "(374.4, 424.8) -> (410.4, 424.8)",
       "drawing_reference": "AEG-DWG-H01",
+      "is_archived": false,
       "provenance": {
         "source_document": "system_diagram_hydraulic.pdf",
         "page_number": 1,
@@ -1289,6 +1407,7 @@
       "line_type": "solid_purple",
       "endpoints": "(230.4, 231.8) -> (187.2, 324.0)",
       "drawing_reference": "AEG-DWG-H01",
+      "is_archived": false,
       "provenance": {
         "source_document": "system_diagram_hydraulic.pdf",
         "page_number": 1,
@@ -1307,6 +1426,7 @@
       "line_type": "solid_purple",
       "endpoints": "(374.4, 231.8) -> (388.8, 324.0)",
       "drawing_reference": "AEG-DWG-H01",
+      "is_archived": false,
       "provenance": {
         "source_document": "system_diagram_hydraulic.pdf",
         "page_number": 1,
@@ -1325,6 +1445,7 @@
       "line_type": "3_phase_ac",
       "endpoints": "Q1 Disconnect -> 30A Primary Fuses -> T1 Primary",
       "drawing_reference": "AEG-DWG-E02",
+      "is_archived": false,
       "provenance": {
         "source_document": "system_diagram_electrical.png",
         "page_number": 1,
@@ -1343,6 +1464,7 @@
       "line_type": "120v_ac",
       "endpoints": "T1 Secondary -> PLC-03 24VDC Power Supply",
       "drawing_reference": "AEG-DWG-E02",
+      "is_archived": false,
       "provenance": {
         "source_document": "system_diagram_electrical.png",
         "page_number": 1,
@@ -1361,6 +1483,7 @@
       "line_type": "wiring_lead",
       "endpoints": "Terminal Block TB-7 (Connector J-14) -> PRESSURE XDCR (PS-04A)",
       "drawing_reference": "AEG-DWG-W03",
+      "is_archived": false,
       "provenance": {
         "source_document": "wiring_diagram.pdf",
         "page_number": 1,
@@ -1379,6 +1502,7 @@
       "line_type": "wiring_lead",
       "endpoints": "Terminal Block TB-7 (Connector J-15) -> IV-21 SOLENOID",
       "drawing_reference": "AEG-DWG-W03",
+      "is_archived": false,
       "provenance": {
         "source_document": "wiring_diagram.pdf",
         "page_number": 1,
@@ -1392,20 +1516,7 @@
   ],
   "conflicts": [
     {
-      "conflict_id": "CONF-55699B85",
-      "fact_1_id": "FACT-05",
-      "fact_2_id": "FACT-07",
-      "conflicting_parameter": "HPU.normal_operating_pressure",
-      "value_1": "200 bar",
-      "value_2": "175 bar",
-      "affected_revision": "3.2",
-      "resolution_status": "RESOLVED_BY_SOURCE_TRUST",
-      "explanation": "Discrepancy between Tier 1 source (ECN-1042.pdf: '200') and Tier 5 source (site_survey_notes.docx: '175'). The higher authority source governs; lower authority source represents an unverified field observation or informal claim.",
-      "source_1": "ECN-1042.pdf",
-      "source_2": "site_survey_notes.docx"
-    },
-    {
-      "conflict_id": "CONF-706C8D08",
+      "conflict_id": "CONF-10311371",
       "fact_1_id": "FACT-05",
       "fact_2_id": "FACT-06",
       "conflicting_parameter": "HPU.normal_operating_pressure",
@@ -1416,19 +1527,6 @@
       "explanation": "Historical value '180' bar (valid 3.0 to 3.2) was superseded by '200' bar starting at Revision 3.2 per ECN-1042.pdf.",
       "source_1": "ECN-1042.pdf",
       "source_2": "operator_manual.pdf"
-    },
-    {
-      "conflict_id": "CONF-E62876E9",
-      "fact_1_id": "FACT-06",
-      "fact_2_id": "FACT-07",
-      "conflicting_parameter": "HPU.normal_operating_pressure",
-      "value_1": "180 bar",
-      "value_2": "175 bar",
-      "affected_revision": "3.2",
-      "resolution_status": "RESOLVED_BY_REVISION",
-      "explanation": "Historical value '180' bar (valid 3.0 to 3.2) was superseded by '175' bar starting at Revision 3.2 per site_survey_notes.docx.",
-      "source_1": "operator_manual.pdf",
-      "source_2": "site_survey_notes.docx"
     }
   ]
 }
