@@ -1,0 +1,1434 @@
+{
+  "export_version": "1.0",
+  "export_timestamp": "2026-11-03T21:17:40.203229",
+  "total_documents": 20,
+  "total_components": 14,
+  "total_facts": 28,
+  "total_relationships": 8,
+  "total_conflicts": 3,
+  "documents": [
+    {
+      "document_id": "ECN-1042",
+      "filename": "ECN-1042.pdf",
+      "document_type": "PDF",
+      "source_category": "engineering_bulletin",
+      "revision": "3.2",
+      "publication_date": "2025-09-30",
+      "effective_date": "2025-09-30",
+      "trust_level": 1,
+      "is_active": true,
+      "sha256_hash": "b123d820311549d30c40770c3cf540ebf0ead96ccff4d6ffed878678d4718203",
+      "metadata": {
+        "relative_path": "engineering_bulletins/ECN-1042.pdf",
+        "size_bytes": 3088
+      }
+    },
+    {
+      "document_id": "ECN-1058",
+      "filename": "ECN-1058.pdf",
+      "document_type": "PDF",
+      "source_category": "engineering_bulletin",
+      "revision": "3.2.1",
+      "publication_date": "2025-11-18",
+      "effective_date": "2025-11-18",
+      "trust_level": 1,
+      "is_active": true,
+      "sha256_hash": "c0872d612fb851b80f8cfee5803ad5dd61dacd1421f7b15e03c979276a50cd88",
+      "metadata": {
+        "relative_path": "engineering_bulletins/ECN-1058.pdf",
+        "size_bytes": 2418
+      }
+    },
+    {
+      "document_id": "AEG-CR-700",
+      "filename": "component_register.xlsx",
+      "document_type": "XLSX",
+      "source_category": "master_register",
+      "revision": "Current",
+      "publication_date": "2025-09-30",
+      "effective_date": "2025-09-30",
+      "trust_level": 1,
+      "is_active": true,
+      "sha256_hash": "0d7ec1291d5f94e26a516bca378b6a41cbe85c6364f45616002abd9692b438cf",
+      "metadata": {
+        "relative_path": "reference/component_register.xlsx",
+        "size_bytes": 6087
+      }
+    },
+    {
+      "document_id": "CFG-PLC03-321",
+      "filename": "configuration_export.json",
+      "document_type": "JSON",
+      "source_category": "machine_export",
+      "revision": "3.2.1",
+      "publication_date": "2026-02-03",
+      "effective_date": "2026-02-03",
+      "trust_level": 1,
+      "is_active": true,
+      "sha256_hash": "ef9625a198508a8f55580582847d06fa7a2931452d22c325b959ba8a864651bd",
+      "metadata": {
+        "relative_path": "configuration/configuration_export.json",
+        "size_bytes": 1584
+      }
+    },
+    {
+      "document_id": "AEG-RH-700",
+      "filename": "revision_history.xlsx",
+      "document_type": "XLSX",
+      "source_category": "timeline_authority",
+      "revision": "3.2.1",
+      "publication_date": "2025-11-18",
+      "effective_date": "2025-11-18",
+      "trust_level": 1,
+      "is_active": true,
+      "sha256_hash": "ce4a152d0ff9b9d02281aabc84e1f1f411f42602fdd7f2a451af726a67eae451",
+      "metadata": {
+        "relative_path": "reference/revision_history.xlsx",
+        "size_bytes": 5615
+      }
+    },
+    {
+      "document_id": "AEG-AL-700",
+      "filename": "alarm_reference.pdf",
+      "document_type": "PDF",
+      "source_category": "official_reference",
+      "revision": "Rev 5",
+      "publication_date": "2025-11-18",
+      "effective_date": "2025-11-18",
+      "trust_level": 2,
+      "is_active": true,
+      "sha256_hash": "9d0d592ad8dd8bbbd0f28a0d21ed55d1bcb1e3338e9dc1e142a758ceb1af8915",
+      "metadata": {
+        "relative_path": "reference/alarm_reference.pdf",
+        "size_bytes": 4043
+      }
+    },
+    {
+      "document_id": "AEG-MM-700",
+      "filename": "maintenance_manual.pdf",
+      "document_type": "PDF",
+      "source_category": "official_manual",
+      "revision": "Rev 3",
+      "publication_date": "2025-09-30",
+      "effective_date": "2025-09-30",
+      "trust_level": 2,
+      "is_active": true,
+      "sha256_hash": "3c8b74fff3264210e25301093e23167923b89ac673f7ddd8a6921e267d19e2ba",
+      "metadata": {
+        "relative_path": "manuals/maintenance_manual.pdf",
+        "size_bytes": 3558
+      }
+    },
+    {
+      "document_id": "AEG-OM-700",
+      "filename": "operator_manual.pdf",
+      "document_type": "PDF",
+      "source_category": "official_manual",
+      "revision": "Rev 4",
+      "publication_date": "2025-09-30",
+      "effective_date": "2025-09-30",
+      "trust_level": 2,
+      "is_active": true,
+      "sha256_hash": "d2e205191f1f8775a207c1b239e7c25ced7fd094f4acc3d94c34c89845e5cdc5",
+      "metadata": {
+        "relative_path": "manuals/operator_manual.pdf",
+        "size_bytes": 4883
+      }
+    },
+    {
+      "document_id": "CAL-APP-C",
+      "filename": "scanned_appendix_calibration.pdf",
+      "document_type": "PDF",
+      "source_category": "calibration_record",
+      "revision": "Uncontrolled Binder Copy",
+      "publication_date": "2026-01-09",
+      "effective_date": "2026-01-09",
+      "trust_level": 2,
+      "is_active": true,
+      "sha256_hash": "0e1548824546ac94a881a0295c21fcf615a4e3b45993c571c291a3e5e70572cd",
+      "metadata": {
+        "relative_path": "scans/scanned_appendix_calibration.pdf",
+        "size_bytes": 4201964
+      }
+    },
+    {
+      "document_id": "AEG-DWG-E02",
+      "filename": "system_diagram_electrical.png",
+      "document_type": "PNG",
+      "source_category": "engineering_drawing",
+      "revision": "Current",
+      "publication_date": "2025-09-30",
+      "effective_date": "2025-09-30",
+      "trust_level": 2,
+      "is_active": true,
+      "sha256_hash": "cdca4f25cf2f29746816c18154b98c47763dca56927a0e27d776bbcb69d56381",
+      "metadata": {
+        "relative_path": "diagrams/system_diagram_electrical.png",
+        "size_bytes": 49249
+      }
+    },
+    {
+      "document_id": "AEG-DWG-H01",
+      "filename": "system_diagram_hydraulic.pdf",
+      "document_type": "PDF",
+      "source_category": "engineering_drawing",
+      "revision": "Current",
+      "publication_date": "2025-09-30",
+      "effective_date": "2025-09-30",
+      "trust_level": 2,
+      "is_active": true,
+      "sha256_hash": "933346844a8ea911287cc111a748f2452d61f5572f4bb210e4fe7f8f45cc0595",
+      "metadata": {
+        "relative_path": "diagrams/system_diagram_hydraulic.pdf",
+        "size_bytes": 3072
+      }
+    },
+    {
+      "document_id": "AEG-GL-700",
+      "filename": "terminology_glossary.docx",
+      "document_type": "DOCX",
+      "source_category": "official_reference",
+      "revision": "Rev 2",
+      "publication_date": "2024-03-01",
+      "effective_date": "2024-03-01",
+      "trust_level": 2,
+      "is_active": true,
+      "sha256_hash": "8f1f0465716144fd44009f27e5d19d4d23335183c42dde8dd80c75eafaff9afe",
+      "metadata": {
+        "relative_path": "reference/terminology_glossary.docx",
+        "size_bytes": 9860
+      }
+    },
+    {
+      "document_id": "AEG-DWG-W03",
+      "filename": "wiring_diagram.pdf",
+      "document_type": "PDF",
+      "source_category": "engineering_drawing",
+      "revision": "Current",
+      "publication_date": "2025-09-30",
+      "effective_date": "2025-09-30",
+      "trust_level": 2,
+      "is_active": true,
+      "sha256_hash": "e30fc6eea79c62f10b76f5d2f806ff46b89ca471a2babe7468a9eae474ebbab4",
+      "metadata": {
+        "relative_path": "diagrams/wiring_diagram.pdf",
+        "size_bytes": 2865
+      }
+    },
+    {
+      "document_id": "HMI-SCR-01",
+      "filename": "screen_01_home.png",
+      "document_type": "PNG",
+      "source_category": "hmi_screen",
+      "revision": "SW Rev 3.2",
+      "publication_date": "2026-01-09",
+      "effective_date": "2026-01-09",
+      "trust_level": 3,
+      "is_active": true,
+      "sha256_hash": "81fa08456f5a399d43f5a32e7915ffae8af6e1089f6c9ae03f1649d4fa17ac8c",
+      "metadata": {
+        "relative_path": "screenshots/screen_01_home.png",
+        "size_bytes": 53344
+      }
+    },
+    {
+      "document_id": "HMI-SCR-02",
+      "filename": "screen_02_alarms.png",
+      "document_type": "PNG",
+      "source_category": "hmi_screen",
+      "revision": "SW Rev 3.2",
+      "publication_date": "2026-01-09",
+      "effective_date": "2026-01-09",
+      "trust_level": 3,
+      "is_active": true,
+      "sha256_hash": "7717ec7cb148c4ebb9c0b3280c0e535b6c8312b6e028f8b6f5417f9b76c080da",
+      "metadata": {
+        "relative_path": "screenshots/screen_02_alarms.png",
+        "size_bytes": 38468
+      }
+    },
+    {
+      "document_id": "HMI-SCR-03",
+      "filename": "screen_03_diagnostics.png",
+      "document_type": "PNG",
+      "source_category": "hmi_screen",
+      "revision": "SW Rev 3.2 / Firmware 3.2.1",
+      "publication_date": "2026-01-09",
+      "effective_date": "2026-01-09",
+      "trust_level": 3,
+      "is_active": true,
+      "sha256_hash": "0ba0bb696883f32d4e7b5db5f258b89a70f4d2a3535c7dc0da7450c5394b91f4",
+      "metadata": {
+        "relative_path": "screenshots/screen_03_diagnostics.png",
+        "size_bytes": 38553
+      }
+    },
+    {
+      "document_id": "TRN-SLD-07",
+      "filename": "training_slide_excerpt.pptx",
+      "document_type": "PPTX",
+      "source_category": "training_material",
+      "revision": "Excerpt Slides 4-6",
+      "publication_date": "2025-06-01",
+      "effective_date": "2025-06-01",
+      "trust_level": 3,
+      "is_active": true,
+      "sha256_hash": "f4157c2c5a24d25f4b48f0677170cb1bc1e4bc732c48499ec0c12c6eb2a41b82",
+      "metadata": {
+        "relative_path": "extra/training_slide_excerpt.pptx",
+        "size_bytes": 74698
+      }
+    },
+    {
+      "document_id": "AEG-OM-700-V1",
+      "filename": "legacy_manual_v1.html",
+      "document_type": "HTML",
+      "source_category": "legacy_manual",
+      "revision": "Rev 1",
+      "publication_date": "2023-06-02",
+      "effective_date": "2023-06-02",
+      "trust_level": 4,
+      "is_active": true,
+      "sha256_hash": "edf3c3eaa7e32814be0c733af26fc746ebc4057ce4d954950e9b8c3b6ecbeb96",
+      "metadata": {
+        "relative_path": "manuals/legacy_manual_v1.html",
+        "size_bytes": 3198
+      }
+    },
+    {
+      "document_id": "FLD-NOT-04",
+      "filename": "site_survey_notes.docx",
+      "document_type": "DOCX",
+      "source_category": "field_notes",
+      "revision": "Uncontrolled / Undated",
+      "publication_date": "Unknown",
+      "effective_date": "Unknown",
+      "trust_level": 5,
+      "is_active": true,
+      "sha256_hash": "e272f04accec35ac2948c2ceade2cb0daa98255e7286099892b823868d1b093a",
+      "metadata": {
+        "relative_path": "low_trust/site_survey_notes.docx",
+        "size_bytes": 9285
+      }
+    },
+    {
+      "document_id": "HF32-SDS-06",
+      "filename": "safety_data_sheet_hydraulic_fluid.pdf",
+      "document_type": "PDF",
+      "source_category": "noise_reference",
+      "revision": "Rev 2025-02-11",
+      "publication_date": "2025-02-11",
+      "effective_date": "2025-02-11",
+      "trust_level": 6,
+      "is_active": true,
+      "sha256_hash": "436887ad5b0f610fa14c9594c87847999ebc0ee61b917ea2297439759f1001a5",
+      "metadata": {
+        "relative_path": "noise/safety_data_sheet_hydraulic_fluid.pdf",
+        "size_bytes": 4280
+      }
+    }
+  ],
+  "components": [
+    {
+      "component_id": "A17",
+      "canonical_name": "Alarm A17: Hydraulic Pressure Low",
+      "aliases": [
+        "Alarm A17",
+        "A17"
+      ],
+      "component_type": "alarm",
+      "description": "Triggers when hydraulic pressure drops below 150 bar. Requires Shutdown Procedure 4.7 if persistent > 10 s.",
+      "location": "N/A (software alarm)",
+      "status": "Active",
+      "source_references": [
+        "alarm_reference.pdf",
+        "screen_02_alarms.png",
+        "ECN-1058.pdf"
+      ],
+      "provenance": {
+        "source_document": "alarm_reference.pdf",
+        "page_number": 1,
+        "section_name": "Alarm Table",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "A18",
+      "canonical_name": "Alarm A18: Hydraulic Pressure High",
+      "aliases": [
+        "Alarm A18",
+        "A18"
+      ],
+      "component_type": "alarm",
+      "description": "Triggers when hydraulic pressure exceeds 220 bar. Requires immediate HPU stop.",
+      "location": "N/A (software alarm)",
+      "status": "Active",
+      "source_references": [
+        "alarm_reference.pdf"
+      ],
+      "provenance": {
+        "source_document": "alarm_reference.pdf",
+        "page_number": 1,
+        "section_name": "Alarm Table",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "A19",
+      "canonical_name": "Alarm A19: Pressure Sensor Signal Invalid",
+      "aliases": [
+        "Alarm A19",
+        "A19"
+      ],
+      "component_type": "alarm",
+      "description": "Triggers when sensor signal is invalid or drift exceeds tolerance (drift issue resolved by PS-04A).",
+      "location": "N/A (software alarm)",
+      "status": "Active",
+      "source_references": [
+        "alarm_reference.pdf",
+        "ECN-1042.pdf"
+      ],
+      "provenance": {
+        "source_document": "alarm_reference.pdf",
+        "page_number": 1,
+        "section_name": "Alarm Table",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "AUX_RESERVOIR",
+      "canonical_name": "Auxiliary Fluid Reservoir",
+      "aliases": [
+        "Aux Reservoir",
+        "Auxiliary Reservoir"
+      ],
+      "component_type": "reservoir",
+      "description": "Line 4/5 specific auxiliary reservoir topping up main reservoir during peak press demand. Omitted from standard Operator Manual.",
+      "location": "Line 4 / Line 5 Peak Demand Bay",
+      "status": "Active",
+      "source_references": [
+        "system_diagram_hydraulic.pdf",
+        "training_slide_excerpt.pptx"
+      ],
+      "provenance": {
+        "source_document": "system_diagram_hydraulic.pdf",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Rect: (447.2, 410.2, 488.8, 433.6)",
+        "extraction_method": "vector_geometry",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "HPU",
+      "canonical_name": "Hydraulic Power Unit",
+      "aliases": [
+        "HP Unit",
+        "Hydraulic Unit",
+        "Hydraulic Power Pack",
+        "The Unit",
+        "Hydraulic Pack"
+      ],
+      "component_type": "power_unit",
+      "description": "Primary hydraulic pressure source for the press circuit.",
+      "location": "Skid A, Bay 2",
+      "status": "Active",
+      "source_references": [
+        "component_register.xlsx",
+        "operator_manual.pdf",
+        "training_slide_excerpt.pptx"
+      ],
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 1",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "IV-21",
+      "canonical_name": "Isolation Valve 21",
+      "aliases": [
+        "IV21",
+        "Isolation Valve",
+        "Isolation Valve 21"
+      ],
+      "component_type": "valve",
+      "description": "Normally Open hydraulic isolation valve isolating HPU from the press circuit.",
+      "location": "Hydraulic Module",
+      "status": "Active",
+      "source_references": [
+        "component_register.xlsx",
+        "maintenance_manual.pdf",
+        "operator_manual.pdf"
+      ],
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 2",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "MAIN_RESERVOIR",
+      "canonical_name": "Main Hydraulic Fluid Reservoir",
+      "aliases": [
+        "Main Reservoir",
+        "Reservoir"
+      ],
+      "component_type": "reservoir",
+      "description": "Primary fluid reservoir supplying hydraulic fluid to the HPU pump suction.",
+      "location": "Line 4 Press Skid",
+      "status": "Active",
+      "source_references": [
+        "system_diagram_hydraulic.pdf",
+        "training_slide_excerpt.pptx"
+      ],
+      "provenance": {
+        "source_document": "system_diagram_hydraulic.pdf",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Rect: (270.1, 415.2, 334.7, 427.6)",
+        "extraction_method": "vector_geometry",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "PLC-03",
+      "canonical_name": "HCS Controller PLC-03",
+      "aliases": [
+        "PLC03",
+        "Aegis Controller",
+        "Controller",
+        "HCS Controller"
+      ],
+      "component_type": "controller",
+      "description": "Supervises startup sequencing, monitoring, interlocks, and alarms.",
+      "location": "Control Cabinet 1",
+      "status": "Active",
+      "source_references": [
+        "component_register.xlsx",
+        "operator_manual.pdf",
+        "system_diagram_hydraulic.pdf"
+      ],
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 6",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "PS-04",
+      "canonical_name": "Pressure Sensor 04",
+      "aliases": [
+        "P04",
+        "PS04",
+        "Pressure Sensor 04"
+      ],
+      "component_type": "sensor",
+      "description": "Legacy HPU discharge pressure sensor. Superseded by PS-04A effective SW 3.2 per ECN-1042.",
+      "location": "HPU discharge line",
+      "status": "Superseded",
+      "source_references": [
+        "component_register.xlsx",
+        "ECN-1042.pdf",
+        "legacy_manual_v1.html"
+      ],
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 3",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "PS-04A",
+      "canonical_name": "Pressure Sensor 04A",
+      "aliases": [
+        "P04A",
+        "PS04A",
+        "P.S.04-A",
+        "Pressure Sensor 04A",
+        "Pressure XDCR"
+      ],
+      "component_type": "sensor",
+      "description": "Active HPU discharge pressure sensor. Requires controller firmware >= 3.2.",
+      "location": "HPU discharge line",
+      "status": "Active",
+      "source_references": [
+        "component_register.xlsx",
+        "ECN-1042.pdf",
+        "screen_03_diagnostics.png"
+      ],
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 4",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "PS-40",
+      "canonical_name": "Pressure Sensor 40",
+      "aliases": [
+        "P40",
+        "PS40",
+        "Coolant Pressure Sensor 40"
+      ],
+      "component_type": "sensor",
+      "description": "Coolant loop pressure sensor on Skid B. Completely unrelated to HPU discharge circuit.",
+      "location": "Coolant Loop, Skid B",
+      "status": "Active",
+      "source_references": [
+        "component_register.xlsx",
+        "configuration_export.json"
+      ],
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 5",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "Q1",
+      "canonical_name": "Main Disconnect Switch Q1",
+      "aliases": [
+        "Disconnect Q1",
+        "Q1"
+      ],
+      "component_type": "electrical",
+      "description": "Incoming 3-phase power disconnect switch (480V 3-phase).",
+      "location": "Control Cabinet 1",
+      "status": "Active",
+      "source_references": [
+        "component_register.xlsx",
+        "system_diagram_electrical.png"
+      ],
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 11",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "T1",
+      "canonical_name": "Control Power Transformer T1",
+      "aliases": [
+        "Transformer T1",
+        "T1"
+      ],
+      "component_type": "electrical",
+      "description": "Step-down transformer converting 480V to 120V AC for control power.",
+      "location": "Control Cabinet 1",
+      "status": "Active",
+      "source_references": [
+        "component_register.xlsx",
+        "system_diagram_electrical.png"
+      ],
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 12",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      }
+    },
+    {
+      "component_id": "TB-7",
+      "canonical_name": "Terminal Block 7",
+      "aliases": [
+        "TB7",
+        "Terminal Block 7"
+      ],
+      "component_type": "electrical",
+      "description": "Control cabinet terminal block providing wiring interface for PS-04A 4-20mA sensor loop.",
+      "location": "Control Cabinet 1",
+      "status": "Active",
+      "source_references": [
+        "component_register.xlsx",
+        "wiring_diagram.pdf"
+      ],
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 10",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      }
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "FACT-08",
+      "subject": "A17",
+      "predicate": "trigger_threshold",
+      "object_value": "< 150",
+      "unit": "bar",
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "alarm_reference.pdf",
+        "page_number": 1,
+        "section_name": "Alarm Reference Table",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Condition: Hydraulic pressure below 150 bar."
+    },
+    {
+      "fact_id": "FACT-09",
+      "subject": "A17",
+      "predicate": "panel_color",
+      "object_value": "RED",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "alarm_reference.pdf",
+        "page_number": 1,
+        "section_name": "Alarm Reference Table",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Panel Indication: RED."
+    },
+    {
+      "fact_id": "FACT-10",
+      "subject": "A17",
+      "predicate": "possible_causes",
+      "object_value": "1. IV-21 closed or partially closed; 2. Low hydraulic fluid; 3. Pressure sensor signal invalid",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "alarm_reference.pdf",
+        "page_number": 1,
+        "section_name": "Alarm Reference Table",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Possible causes listed in AEG-AL-700."
+    },
+    {
+      "fact_id": "FACT-11",
+      "subject": "A17",
+      "predicate": "persistent_action",
+      "object_value": "Execute Shutdown Procedure 4.7 if persistent > 10 seconds (close IV-21, confirm pressure decay, set POWER to OFF, tag out)",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "maintenance_manual.pdf",
+        "page_number": 1,
+        "section_name": "Section 4 Alarm A17 Response",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Transient A17 clears on own; persistent > 10s requires Shutdown Procedure 4.7."
+    },
+    {
+      "fact_id": "FACT-18",
+      "subject": "AUX_RESERVOIR",
+      "predicate": "training_deck_introduction",
+      "object_value": "Auxiliary Reservoir is introduced in training deck as Line 4/5 specific detail for peak demand top-up; explicitly omitted from standard Operator Manual",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "training_slide_excerpt.pptx",
+        "page_number": 1,
+        "section_name": "Slide 2 What is the HPU?",
+        "cell_or_bbox": null,
+        "extraction_method": "pptx_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Slide 2: 'tops up from a smaller Auxiliary Reservoir during peak demand. Note: Line 4/5-specific detail and is not covered in standard Operator Manual.'"
+    },
+    {
+      "fact_id": "FACT-27",
+      "subject": "ECN-1058",
+      "predicate": "approver_signature",
+      "object_value": "OMITTED_BLANK",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "ECN-1058.pdf",
+        "page_number": 1,
+        "section_name": "Header",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "PARTIALLY VERIFIED",
+      "notes": "ECN-1058 is marked 'Released' but individual approval signature block is blank (Category D)."
+    },
+    {
+      "fact_id": "FACT-26",
+      "subject": "ELEC_SYSTEM",
+      "predicate": "voltage_sensor_calibration_interval",
+      "object_value": "FALSE_PREMISE_NOT_PRESENT",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "system_diagram_electrical.png",
+        "page_number": 1,
+        "section_name": "Diagram AEG-DWG-E02",
+        "cell_or_bbox": null,
+        "extraction_method": "rapidocr_onnx",
+        "confidence": 1.0
+      },
+      "verification_status": "NOT FOUND",
+      "notes": "No voltage sensor exists on electrical diagram AEG-DWG-E02 (Category B false premise)."
+    },
+    {
+      "fact_id": "FACT-01",
+      "subject": "HPU",
+      "predicate": "startup_interlock_iv21",
+      "object_value": "OPEN",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "operator_manual.pdf",
+        "page_number": 1,
+        "section_name": "Section 4.3 Starting the Hydraulic Power Unit",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "IV-21 must be verified OPEN prior to starting HPU."
+    },
+    {
+      "fact_id": "FACT-02",
+      "subject": "HPU",
+      "predicate": "startup_interlock_fluid_level",
+      "object_value": "NORMAL",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "operator_manual.pdf",
+        "page_number": 1,
+        "section_name": "Section 4.3 Starting the Hydraulic Power Unit",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Hydraulic fluid level must be within normal band on sight glass."
+    },
+    {
+      "fact_id": "FACT-03",
+      "subject": "HPU",
+      "predicate": "startup_interlock_estop",
+      "object_value": "RESET",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "operator_manual.pdf",
+        "page_number": 1,
+        "section_name": "Section 4.3 Starting the Hydraulic Power Unit",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Emergency stop circuit must be RESET."
+    },
+    {
+      "fact_id": "FACT-04",
+      "subject": "HPU",
+      "predicate": "startup_interlock_access_panel",
+      "object_value": "CLOSED",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "operator_manual.pdf",
+        "page_number": 1,
+        "section_name": "Section 4.3 Starting the Hydraulic Power Unit",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "WARNING: Do not start unit with maintenance access panel removed."
+    },
+    {
+      "fact_id": "FACT-05",
+      "subject": "HPU",
+      "predicate": "normal_operating_pressure",
+      "object_value": "200",
+      "unit": "bar",
+      "applicable_revision_start": "3.2",
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "ECN-1042.pdf",
+        "page_number": 1,
+        "section_name": "Section 1 Description of Change",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Normal HPU discharge pressure setpoint revised from 180 bar to 200 bar effective SW 3.2."
+    },
+    {
+      "fact_id": "FACT-06",
+      "subject": "HPU",
+      "predicate": "normal_operating_pressure",
+      "object_value": "180",
+      "unit": "bar",
+      "applicable_revision_start": "3.0",
+      "applicable_revision_end": "3.2",
+      "is_current": false,
+      "provenance": {
+        "source_document": "operator_manual.pdf",
+        "page_number": 1,
+        "section_name": "Section 5 Normal Operating Ranges",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Normal discharge pressure on revisions prior to 3.2 was 180 bar, measured by PS-04."
+    },
+    {
+      "fact_id": "FACT-07",
+      "subject": "HPU",
+      "predicate": "normal_operating_pressure",
+      "object_value": "175",
+      "unit": "bar",
+      "applicable_revision_start": "3.2",
+      "applicable_revision_end": null,
+      "is_current": false,
+      "provenance": {
+        "source_document": "site_survey_notes.docx",
+        "page_number": 1,
+        "section_name": "Site Visit Notes",
+        "cell_or_bbox": null,
+        "extraction_method": "docx_native",
+        "confidence": 0.85
+      },
+      "verification_status": "PARTIALLY VERIFIED",
+      "notes": "Informal observation by J. Torres using uncalibrated local gauge; unverified field note."
+    },
+    {
+      "fact_id": "FACT-22",
+      "subject": "HPU",
+      "predicate": "operating_pressure_applicability",
+      "object_value": "Units on software revision >= 3.2 manufactured after 2024. Units running earlier software operate at 180 bar.",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "ECN-1042.pdf",
+        "page_number": 1,
+        "section_name": "Section 1",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "ECN-1042 confirms higher setpoint applies to post-2024 Series-7 units on SW >= 3.2."
+    },
+    {
+      "fact_id": "FACT-17",
+      "subject": "IV-21",
+      "predicate": "location",
+      "object_value": "Hydraulic Module",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 2",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Location specified in Component Register AEG-CR-700."
+    },
+    {
+      "fact_id": "FACT-28",
+      "subject": "IV-21",
+      "predicate": "mean_time_between_failures",
+      "object_value": "NOT_FOUND",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "maintenance_manual.pdf",
+        "page_number": 1,
+        "section_name": "Section 1",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "NOT FOUND",
+      "notes": "MTBF / reliability engineering metrics are completely absent from documentation (Category A unanswerable)."
+    },
+    {
+      "fact_id": "FACT-12",
+      "subject": "PLC-03",
+      "predicate": "safe_reset_condition",
+      "object_value": "Hydraulic pressure must be below 50 bar. Do NOT reset while pressure > 50 bar.",
+      "unit": "bar",
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "operator_manual.pdf",
+        "page_number": 2,
+        "section_name": "Section 7 Controller Reset",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Resetting under pressure (>50 bar) can cause uncommanded actuation of IV-21."
+    },
+    {
+      "fact_id": "FACT-16",
+      "subject": "PLC-03",
+      "predicate": "direct_schematic_connections",
+      "object_value": "PS-04A and IV-21 (purple control/signal lines)",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "system_diagram_hydraulic.pdf",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Legend & Drawing Lines",
+        "extraction_method": "vector_geometry",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Direct purple lines connect PLC-03 to PS-04A and IV-21. HPU connects via grey fluid path."
+    },
+    {
+      "fact_id": "FACT-13",
+      "subject": "PS-04",
+      "predicate": "identity_distinction",
+      "object_value": "NOT identical to PS-04A. PS-04A has updated signal conditioning to correct 18-month drift, requires FW >= 3.2, and is not a form-fit-function replacement.",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": false,
+      "provenance": {
+        "source_document": "ECN-1042.pdf",
+        "page_number": 1,
+        "section_name": "Section 1 & 2",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "ECN-1042 explicitly states PS-04A is not a form-fit-function replacement for PS-04."
+    },
+    {
+      "fact_id": "FACT-14",
+      "subject": "PS-04A",
+      "predicate": "introducing_document",
+      "object_value": "ECN-1042",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "ECN-1042.pdf",
+        "page_number": 1,
+        "section_name": "Header",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "ECN-1042 introduced sensor change from PS-04 to PS-04A effective SW 3.2."
+    },
+    {
+      "fact_id": "FACT-15",
+      "subject": "PS-04A",
+      "predicate": "required_firmware_version",
+      "object_value": ">= 3.2",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "ECN-1042.pdf",
+        "page_number": 1,
+        "section_name": "Section 1",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Controller firmware must be revision 3.2 or later to read PS-04A correctly."
+    },
+    {
+      "fact_id": "FACT-19",
+      "subject": "PS-04A",
+      "predicate": "diagnostics_screen_tag",
+      "object_value": "P.S.04-A",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "screen_03_diagnostics.png",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sensor Diagnostics Tag Field",
+        "extraction_method": "rapidocr_onnx",
+        "confidence": 0.996
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Screen displays 'P.S.04-A', which corresponds to canonical component PS-04A as printed on physical unit label."
+    },
+    {
+      "fact_id": "FACT-25",
+      "subject": "PS-04A",
+      "predicate": "continuous_operating_temperature_max",
+      "object_value": "NOT_FOUND",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "operator_manual.pdf",
+        "page_number": 1,
+        "section_name": "Specifications",
+        "cell_or_bbox": null,
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "verification_status": "NOT FOUND",
+      "notes": "Operating temperature for PS-04A is completely absent from all dataset documents (Category A unanswerable)."
+    },
+    {
+      "fact_id": "FACT-23",
+      "subject": "PS-40",
+      "predicate": "identity_distinction",
+      "object_value": "Located on Coolant Loop, Skid B. Completely unrelated to HPU discharge circuit. 0-10 bar sensor.",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 5",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Explicitly marked unrelated to HPU circuit in component register and configuration export."
+    },
+    {
+      "fact_id": "FACT-24",
+      "subject": "Q1",
+      "predicate": "incoming_power_rating",
+      "object_value": "480V, 3-Phase",
+      "unit": "V",
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "component_register.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Components, Row 11",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      },
+      "verification_status": "PARTIALLY VERIFIED",
+      "notes": "Incoming disconnect Q1 is rated for 480V 3-phase. 400V operation is not documented (Category C)."
+    },
+    {
+      "fact_id": "FACT-20",
+      "subject": "SW_3_2",
+      "predicate": "release_date",
+      "object_value": "2025-09-30",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "revision_history.xlsx",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Sheet: Revision History, Row 3",
+        "extraction_method": "openpyxl",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Revision 3.2 released 2025-09-30. PS-04 replaced by PS-04A; pressure changed from 180 to 200 bar."
+    },
+    {
+      "fact_id": "FACT-21",
+      "subject": "sensor_ps04a_threshold_bar",
+      "predicate": "manual_terminology_correspondence",
+      "object_value": "Normal operating pressure (or normal HPU discharge pressure setpoint = 200 bar)",
+      "unit": null,
+      "applicable_revision_start": null,
+      "applicable_revision_end": null,
+      "is_current": true,
+      "provenance": {
+        "source_document": "configuration_export.json",
+        "page_number": 1,
+        "section_name": "Section: sensors",
+        "cell_or_bbox": null,
+        "extraction_method": "json_parser",
+        "confidence": 1.0
+      },
+      "verification_status": "VERIFIED",
+      "notes": "Corresponds to 200 bar normal operating pressure in Operator Manual Section 5."
+    }
+  ],
+  "relationships": [
+    {
+      "rel_id": "REL-03",
+      "source_component": "HPU",
+      "relationship_type": "supplies_fluid_to",
+      "target_component": "MAIN_RESERVOIR",
+      "line_type": "solid_grey",
+      "endpoints": "(302.4, 345.6) -> (302.4, 403.2)",
+      "drawing_reference": "AEG-DWG-H01",
+      "provenance": {
+        "source_document": "system_diagram_hydraulic.pdf",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Stroke RGB: [0.333, 0.333, 0.333]",
+        "extraction_method": "vector_geometry",
+        "confidence": 1.0
+      },
+      "notes": "Grey hydraulic fluid path connects HPU pump suction to Main Reservoir."
+    },
+    {
+      "rel_id": "REL-04",
+      "source_component": "MAIN_RESERVOIR",
+      "relationship_type": "interconnects",
+      "target_component": "AUX_RESERVOIR",
+      "line_type": "solid_tan",
+      "endpoints": "(374.4, 424.8) -> (410.4, 424.8)",
+      "drawing_reference": "AEG-DWG-H01",
+      "provenance": {
+        "source_document": "system_diagram_hydraulic.pdf",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Stroke RGB: [0.690, 0.541, 0.306]",
+        "extraction_method": "vector_geometry",
+        "confidence": 1.0
+      },
+      "notes": "Tan reservoir interconnect line connects Main Reservoir to Auxiliary Reservoir (Line 4/5 peak top-up)."
+    },
+    {
+      "rel_id": "REL-01",
+      "source_component": "PLC-03",
+      "relationship_type": "controls",
+      "target_component": "PS-04A",
+      "line_type": "solid_purple",
+      "endpoints": "(230.4, 231.8) -> (187.2, 324.0)",
+      "drawing_reference": "AEG-DWG-H01",
+      "provenance": {
+        "source_document": "system_diagram_hydraulic.pdf",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Stroke RGB: [0.541, 0.294, 0.612]",
+        "extraction_method": "vector_geometry",
+        "confidence": 1.0
+      },
+      "notes": "Purple control/signal line connects PLC-03 output boundary to PS-04A sensor boundary."
+    },
+    {
+      "rel_id": "REL-02",
+      "source_component": "PLC-03",
+      "relationship_type": "controls",
+      "target_component": "IV-21",
+      "line_type": "solid_purple",
+      "endpoints": "(374.4, 231.8) -> (388.8, 324.0)",
+      "drawing_reference": "AEG-DWG-H01",
+      "provenance": {
+        "source_document": "system_diagram_hydraulic.pdf",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Stroke RGB: [0.541, 0.294, 0.612]",
+        "extraction_method": "vector_geometry",
+        "confidence": 1.0
+      },
+      "notes": "Purple control line connects PLC-03 valve driver boundary to IV-21 solenoid driver boundary."
+    },
+    {
+      "rel_id": "REL-07",
+      "source_component": "Q1",
+      "relationship_type": "powers",
+      "target_component": "T1",
+      "line_type": "3_phase_ac",
+      "endpoints": "Q1 Disconnect -> 30A Primary Fuses -> T1 Primary",
+      "drawing_reference": "AEG-DWG-E02",
+      "provenance": {
+        "source_document": "system_diagram_electrical.png",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Top Power Distribution Rail",
+        "extraction_method": "rapidocr_onnx",
+        "confidence": 0.98
+      },
+      "notes": "480V 3-phase incoming power feeds control transformer T1 through 30A primary fuses."
+    },
+    {
+      "rel_id": "REL-08",
+      "source_component": "T1",
+      "relationship_type": "powers",
+      "target_component": "PLC-03",
+      "line_type": "120v_ac",
+      "endpoints": "T1 Secondary -> PLC-03 24VDC Power Supply",
+      "drawing_reference": "AEG-DWG-E02",
+      "provenance": {
+        "source_document": "system_diagram_electrical.png",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Control Power Sub-circuit",
+        "extraction_method": "rapidocr_onnx",
+        "confidence": 0.98
+      },
+      "notes": "120V AC secondary supply powers the 24V DC power supply feeding PLC-03."
+    },
+    {
+      "rel_id": "REL-05",
+      "source_component": "TB-7",
+      "relationship_type": "wires_to",
+      "target_component": "PS-04A",
+      "line_type": "wiring_lead",
+      "endpoints": "Terminal Block TB-7 (Connector J-14) -> PRESSURE XDCR (PS-04A)",
+      "drawing_reference": "AEG-DWG-W03",
+      "provenance": {
+        "source_document": "wiring_diagram.pdf",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Drawing Boxes TB-7 and J-14",
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "notes": "Note 1 explicitly clarifies that field device labeled 'PRESSURE XDCR' at TB-7/J-14 is PS-04A."
+    },
+    {
+      "rel_id": "REL-06",
+      "source_component": "TB-7",
+      "relationship_type": "wires_to",
+      "target_component": "IV-21",
+      "line_type": "wiring_lead",
+      "endpoints": "Terminal Block TB-7 (Connector J-15) -> IV-21 SOLENOID",
+      "drawing_reference": "AEG-DWG-W03",
+      "provenance": {
+        "source_document": "wiring_diagram.pdf",
+        "page_number": 1,
+        "section_name": null,
+        "cell_or_bbox": "Drawing Box IV-21 SOLENOID",
+        "extraction_method": "pdf_native",
+        "confidence": 1.0
+      },
+      "notes": "Wiring diagram connects TB-7 to IV-21 solenoid driver."
+    }
+  ],
+  "conflicts": [
+    {
+      "conflict_id": "CONF-4A628689",
+      "fact_1_id": "FACT-06",
+      "fact_2_id": "FACT-07",
+      "conflicting_parameter": "HPU.normal_operating_pressure",
+      "value_1": "180 bar",
+      "value_2": "175 bar",
+      "affected_revision": "3.2",
+      "resolution_status": "RESOLVED_BY_REVISION",
+      "explanation": "Historical value '180' bar (valid 3.0 to 3.2) was superseded by '175' bar starting at Revision 3.2 per site_survey_notes.docx.",
+      "source_1": "operator_manual.pdf",
+      "source_2": "site_survey_notes.docx"
+    },
+    {
+      "conflict_id": "CONF-68A039F6",
+      "fact_1_id": "FACT-05",
+      "fact_2_id": "FACT-07",
+      "conflicting_parameter": "HPU.normal_operating_pressure",
+      "value_1": "200 bar",
+      "value_2": "175 bar",
+      "affected_revision": "3.2",
+      "resolution_status": "RESOLVED_BY_SOURCE_TRUST",
+      "explanation": "Discrepancy between Tier 1 source (ECN-1042.pdf: '200') and Tier 5 source (site_survey_notes.docx: '175'). The higher authority source governs; lower authority source represents an unverified field observation or informal claim.",
+      "source_1": "ECN-1042.pdf",
+      "source_2": "site_survey_notes.docx"
+    },
+    {
+      "conflict_id": "CONF-F0486C4B",
+      "fact_1_id": "FACT-05",
+      "fact_2_id": "FACT-06",
+      "conflicting_parameter": "HPU.normal_operating_pressure",
+      "value_1": "200 bar",
+      "value_2": "180 bar",
+      "affected_revision": "3.2",
+      "resolution_status": "RESOLVED_BY_REVISION",
+      "explanation": "Historical value '180' bar (valid 3.0 to 3.2) was superseded by '200' bar starting at Revision 3.2 per ECN-1042.pdf.",
+      "source_1": "ECN-1042.pdf",
+      "source_2": "operator_manual.pdf"
+    }
+  ]
+}
