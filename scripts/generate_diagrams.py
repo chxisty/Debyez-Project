@@ -457,3 +457,4 @@ if __name__ == "__main__":
     create_hybrid_retrieval()
     create_entity_resolution()
     print("All 5 diagrams successfully generated in reports/diagrams!")
+
