@@ -25,3 +25,4 @@ for s in scripts:
             print(f"FOUND 'aegis-backend.onrender.com' in {s}!")
         if "debyez-project.onrender.com" in js:
             print(f"FOUND 'debyez-project.onrender.com' in {s}!")
+

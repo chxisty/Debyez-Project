@@ -55,3 +55,4 @@ try:
             print(f"    - {c.get('source_document')} p.{c.get('page_number')}")
 except Exception as e:
     print(f"POST /api/chat -> FAILED: {e}")
+
