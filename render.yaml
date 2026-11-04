@@ -1,7 +1,7 @@
 services:
   # Backend FastAPI Web Service
   - type: web
-    name: aegis-backend
+    name: debyez-project
     env: python
     region: oregon
     plan: free
@@ -29,5 +29,5 @@ services:
       - key: NEXT_PUBLIC_API_URL
         fromService:
           type: web
-          name: aegis-backend
+          name: debyez-project
           property: host

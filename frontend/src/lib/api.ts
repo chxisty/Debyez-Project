@@ -3,7 +3,7 @@
  * Connects the frontend to the FastAPI backend with complete typing.
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://debyez-project.onrender.com";
 
 export interface HealthResponse {
   status: string;

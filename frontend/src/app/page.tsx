@@ -91,7 +91,7 @@ export default function DashboardPage() {
             <h3 className="font-semibold text-sm">Backend Connectivity Error</h3>
             <p className="text-xs text-rose-400/90 mt-0.5">{error}</p>
             <p className="text-xs text-slate-400 mt-2 font-mono">
-              Ensure FastAPI backend is running on http://localhost:8000 via &quot;uvicorn backend.app.main:app --port 8000&quot;
+              Ensure the Aegis FastAPI backend is accessible (Render: https://debyez-project.onrender.com or locally via &quot;uvicorn backend.app.main:app --port 8000&quot;).
             </p>
           </div>
         </div>
